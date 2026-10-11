@@ -21,7 +21,7 @@ Still on Processing 3.5.4? The sketches work there too.
 ## Get the sketches
 
 The starters, helpers, Explorer and demos are in one repo:
-[github.com/georgemandis/processing-community-day-2026-nyc-midi-workshop](https://github.com/georgemandis/morethanmusic).
+[github.com/georgemandis/morethanmusic](https://github.com/georgemandis/morethanmusic).
 
 ```sh
 git clone https://github.com/georgemandis/morethanmusic.git

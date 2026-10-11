@@ -18,7 +18,7 @@ Nine years on, the workshop again, this time for Processing people. Chess on a L
 | Where | Processing Community Day, at NYU ITP, Brooklyn, New York |
 | What | workshop |
 | Site | /talks/pcd-2026-nyc/ |
-| Repo | [github.com/georgemandis/processing-community-day-2026-nyc-midi-workshop](https://github.com/georgemandis/processing-community-day-2026-nyc-midi-workshop) |
+| Repo | [github.com/georgemandis/morethanmusic](https://github.com/georgemandis/morethanmusic) |
 | Event page | [pcd2026.nyc](https://www.pcd2026.nyc/) |
 | Video | [youtube.com/watch?v=SDlynVony4o](https://www.youtube.com/watch?v=SDlynVony4o) |
 

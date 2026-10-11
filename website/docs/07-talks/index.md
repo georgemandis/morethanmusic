@@ -95,5 +95,5 @@ so they stay off the table above.
   [george.mand.is/javascript-webmidi-tiny-computers](https://george.mand.is/javascript-webmidi-tiny-computers).
   It has the JSFoo recording, the controller shopping list, and the library links from the era.
 - The sources for every entry, and the assumptions made where sources disagree, are in
-  [talks/INDEX.md](https://github.com/georgemandis/processing-community-day-2026-nyc-midi-workshop)
+  [talks/INDEX.md](https://github.com/georgemandis/morethanmusic/blob/main/talks/INDEX.md)
   in the repo.

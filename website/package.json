@@ -13,7 +13,7 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "prestart": "node link-repo.mjs",
-    "prebuild": "node link-repo.mjs"
+    "prebuild": "node link-repo.mjs --empty"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.2",

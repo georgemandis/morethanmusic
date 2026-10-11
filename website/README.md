@@ -134,8 +134,8 @@ Plausible is in `headTags` and only loads when `location.hostname` is `morethanm
 - The Helpers page pulls `midi-helpers/README.md#Install` and `#In the IDE`. mtm-helpers packaged
   the helpers without writing site pages and its registry READMEs link to `/helpers/`, so the page
   is real rather than a placeholder.
-- No licence is stated on the About page. The spec proposes MIT for code and CC BY for text; that is
-  George's call and `RELEASE.md` lists it.
+- Licence, decided 2026-10-11: MIT for code (`LICENSE` at the root, same text as `midi-helpers/LICENSE`
+  and the firmware folders), CC BY 4.0 for text and photos (`LICENSE-CONTENT.txt`). The About page says so.
 - Troubleshooting repeats facts from the READMEs and PLAN.md in one place. When a README changes,
   the matching line here is edited by hand.
 - Slides are not on the site. The deck and its sketch stay in `slides/`.

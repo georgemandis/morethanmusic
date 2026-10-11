@@ -46,7 +46,8 @@ merged by hand into the working copy and published back; nothing is lost in betw
 
 ## Licence
 
-Not stated yet. Until it is, the code and text are George Mandis's; ask before reusing beyond reading.
+Code is MIT (`LICENSE`). Text, photos and the talk material are CC BY 4.0 (`LICENSE-CONTENT.txt`): reuse
+them with a credit to George Mandis and a link back here.
 
 ## Where it was
 

@@ -37,6 +37,13 @@ The site, helpers, devices, examples and firmware pointers live in one repo.
 - A fix: generated pages say which source file they come from. Edit the source, not the page. The
   rest are plain Markdown under `website/docs/`.
 
+## Licence
+
+Code is MIT. Text, photos and the talk material are CC BY 4.0: reuse them with a credit to George
+Mandis and a link to this site. Both licences are in the repo as
+[LICENSE](https://github.com/georgemandis/morethanmusic/blob/main/LICENSE) and
+[LICENSE-CONTENT.txt](https://github.com/georgemandis/morethanmusic/blob/main/LICENSE-CONTENT.txt).
+
 ## Who
 
 George Mandis. [george.mand.is](https://george.mand.is).

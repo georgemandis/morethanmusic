@@ -1,0 +1,222 @@
+---
+title: "NEJS Conf, Omaha"
+description: "First time in Omaha. The deck's git history starts here, \"Initial commit circa NEJS\", and the recording is the cleanest of the 2017 run."
+slug: /talks/2017-nejs-conf-omaha/
+sidebar_label: "NEJS Conf 2017"
+sidebar_position: 20170720
+---
+
+{/* generated from talks/2017-nejs-conf-omaha/talk.md by `node website/refresh.mjs talks`; edit the source, not this */}
+
+# NEJS Conf, Omaha
+
+First time in Omaha. The deck's git history starts here, "Initial commit circa NEJS", and the recording is the cleanest of the 2017 run.
+
+| | |
+|---|---|
+| When | July 20 to 22, 2017 |
+| Where | NEJS Conf 2017, Omaha, Nebraska |
+| What | talk |
+| Video | [youtube.com/watch?v=h-kNLD6nBeA](https://www.youtube.com/watch?v=h-kNLD6nBeA) |
+| Event page | [2017.nejsconf.com/speakers/george-mandis](https://2017.nejsconf.com/speakers/george-mandis/) |
+
+No slides for this one are published. A transcript is at the bottom of the page.
+
+<iframe src="https://www.youtube-nocookie.com/embed/h-kNLD6nBeA" title="NEJS Conf, Omaha, NEJS Conf 2017" style={{width: '100%', aspectRatio: '16 / 9', border: 0}} allow="encrypted-media; picture-in-picture" allowFullScreen />
+
+## What happened
+
+The reveal.js deck got its own git repo a week after this one, on 2017-07-29, with the commit
+message "Initial commit circa NEJS". Most of the demo repos share that date. So this is the version
+of the talk that got frozen as the baseline.
+
+The recording opens with the fun facts I used to lead with: first time in Omaha, a year as a digital
+nomad in 18 countries, born in Saudi Arabia, and the marathon in North Korea I accidentally cheated
+at. Then the talk. The captions call me "Jorge mandus" throughout, which I have decided to keep.
+
+NebraskaJS posted the video on 2017-09-29 with the full abstract in the description: "Tiny computers
+such as the RaspberryPi, Arduino and C.H.I.P. have finally reached a level of performance and
+affordability that makes hardware experimentation accessible to everyone."
+
+## Sources
+
+- https://george.mand.is/talks/ : NEJS Conf 2017, July 20 to 22, 2017, Omaha
+- https://2017.nejsconf.com/speakers/george-mandis/
+- Talk folder: `slidedeck/` git log, 2017-07-29 "Initial commit circa NEJS"; `demos/*/` initial commits 2017-07-29; `slidedeck/NOTES.md` hostname `nejs.mand.is`
+- YouTube h-kNLD6nBeA, uploaded 2017-09-29 by NebraskaJS, 2634 seconds
+
+## Transcript
+
+YouTube's automatic captions, deduplicated and broken into paragraphs by `talks/vtt2md.py`. Not
+corrected, so names and the technical words come out wrong now and then.
+
+<details>
+<summary>Read the transcript</summary>
+
+My name is Jorge mandus I'm here today to talk about JavaScript and MIDI I want to thank any J's for having me it's been really wonderfully organized events and it's been really fun to see the other speakers here a lot of the other talks as well we had talks about best practices and usability and organizational practices this might be is useful I don't know so we get started I'm gonna just introduce myself a little bit okay so my name is Jorge man just like I said not.
+
+The most useful talk about helping me one of the more fun talks you see today I find that it's kind of nice to humanize developers at these conferences a little bit so that's information you can use to find me if you want to you can just come talk to me later if you want now expect you take that down I'm a freelance web developer from Portland Oregon I've been developing for over a decade and that feels like a really long time sometimes in JavaScript years oh.
+
+So like I said it's nice to humanize developers a little bit so I had a couple random fun facts about me which may or may not help you remember the things in this talk this is my first time visiting Omaha I lived as a digital nomad for a year once in 18 different countries kind of an interesting story I was born in Saudi Arabia it's a long bizarre story I will tell some other time I once unintentionally cheated while running a marathon in North Korea.
+
+I don't really advocate cheating but if you're going to cheat I would suggest being a little more selective with where you end up doing this and you know as I said earlier there's a lot of really like wonderful accomplished speakers here an interesting things as a freelance developer looking back in my body of work I think my most known thing is a very silly open-source project called Konami j/s I asked this every time do this I once got a couple hands I'm curious has anyone heard of.
+
+This project there's a few okay there we go it's a very it's a very frivolous script I've had over eight years and it feels fitting to mention here just because this is sort of a frivolous talk about fun interesting things we can do with JavaScript it seems to be the theme to my career I guess oh and I have a couple screenshots my famous Konami jeaious once broken marvel calm for about five minutes and this week doc used it to change all their articles there's something to Asami's.
+
+So that's my isn't my more relevantly I like to make things I so we're talking about JavaScript and MIDI today I like to fix show of hands who who thinks they know what MIDI is or is heard of MIDI before okay I don't maybe half one of the things I have to do is like to take a a tool and my tool belt and I like to learn how to use it and then I like to see how I can bend it and do strange things with it was probably not intended for.
+
+And that's kind of a theme for this talk maybe is a music protocol as we'll discover and what's interesting is it's been around for a long time but we can it's not too hard to repurpose MIDI for very non musical things as well demonstrate and talk about so I'd like to actually start with a little experiment here if any one of the really laptops out there does anyone have one handy a couple handy maybe okay I'm gonna throw a little website up here I don't know.
+
+If you can read that but if you could open that website up preferably and in Chrome yeah so we could pull that up to be great and maybe turn up the sound also hoops in your computer oh we have five people that's enough to make some music okay so I just want a little interactive demo using WebRTC and maybe Audio has a fun fun stuff let's see okay maybe it's not gonna work today let's see no I don't hear is anyone bring anything nope well like.
+
+That I'm just gonna move on I guess well what's supposed to happen is I was playing notes up here not the usual notes playing on the keyboard I've had this work at all the other conferences so I don't know exactly what's going on apologize for that one I have a second demo I I don't know if everybody know that first just went I let's do it okay I wasn't going to but that's enthusiastic so everyone Punk of this website let's try to come up with a little bit similar way it uses WebSockets instead of web RT.
+
+So maybe that'll help the situation so I'm gonna click on this okay we've got 38 people that seems like that seems unlikely or maybe alright so I'm gonna click start the symphony that's more than enough people not all gonna hear something I bother so what is doing right now is it's taking a MIDI file and it's splitting up all the different parts of a song and each one of you is gonna get an individual part of that song and if it works correctly they should.
+
+All start at the same time you should get like a little symphony happen although I'm not super optimistic I won't like and I think that was it I thought I heard something no did I miss it yeah yeah are we getting some everything something that corner okay okay this is actually the largest room I've been listen I'm now realizing this is no this big in a much smaller room with like 20 or 30 people you can you can definitely tell I tell you what if you're really interested in.
+
+This I'd be happy to go like in the other room next door we can try to make this work in a smaller setting because I oh yeah wait it is yeah it is dependent up on the Internet almost certainly yeah I broke the cardinal rule of like speaking I dependent on the internet for something it was worth it all right well so here's what we're talking about today we're talking tom is goodness ladies a JavaScript conference we're talking about tiny computers like weird we knows raspberry PI's those sort of things.
+
+I find those really interesting and kind of a sort of thing to combine the JavaScript and MIDI as far as making standalone interesting projects and of course about MIDI the musical instrument device interface so what why JavaScript JavaScript is everywhere for better or worse it's it's on clients it's on servers it's on hardware like you find box you can find I mean everything these days is written in JavaScript and it's if I mean it's basically everywhere I I teach a boot camp back and forth.
+
+And I have a lot of people have never programmed anything life when we start with JavaScript some of the basic programming principles you know I don't know where it's gonna be like 10 years from now you may have to learn it's very likely almost certainly going to change in your lifetime but javascript is not a bad place to be and it's it's where the people are the other thing I tell them is you know whether or not you think it's whether or not depending on how strong your opinions about how JavaScript should be written or.
+
+What it should be doing or other aspects of the code itself it's usually making things so you have to be there it's ok more relevant to this talk it's a nature is a very natural to work so MIDI is a a protocol for musical instruments to talk to one another and it was designed to be a serf in this long before JavaScript is even the things I've been like in 1983 and so working with MIDI in JavaScript feels pretty control to callbacks and whatnot it just it doesn't require a lot of it doesn't look very different than your normal JavaScript code.
+
+So why tiny computers to be perfectly honest I probably could have given this talk and just focused on JavaScript and MIDI but I really like tiny computers I think they're I think there's ranging in power it's sort of the where like answer to the open-source you know and it's also sort of an interesting way to sort of dip your toe into like the Internet of Things is well we'll talk about here also just to be clear what I'm talking about when I talk about tiny computers microcontrollers.
+
+And whatnot I'm talking about these guys chips isn't heard of chip computers yes okay I was like they seem a little less known than the other ones but I think they're fantastic there I recommend entirely and s Perino's this will clicker I'm using is actually in Esperanto it's a puck and I programmed it to actually be a MIDI controller that's controlling all my slides and whatnot as you'll see here later so I think these are really just fun way to extend the ways we can interact with JavaScript.
+
+And MIDI and make fun things oh by the way at the end I have a website that has links and things to a lot of the stuff I'm talking about so don't worry too much of you're not catching it or writing it down I want to remember it later it's it's on the last slide Arduino those are the three pies chips s Perino's so why MIDI it's a little more interesting and maybe something you know less about so what is many exactly like I said earlier it stands for.
+
+The musical instrument device interface is a call that in 1983 to make electronic music little instruments talk to one another it's also a standard so you know the way that they talk to one another involves bits and bytes and signals what those bits and bytes and signals actually mean is decided by the standard so all major electronic music companies back in the eighties got together and decided okay we need a way to make our devices communicate with one another this is how we're going to communicate.
+
+You know end up being on this is all good communicator know being off etc etc it's also a file format the reason I have this slide about that because when I say oh I'm doing talking MIDI everyone's like oh I know MIDI the MIDI is really a lot of things so I need to sort of point that out it's um if you're a child the 90s like me you grew up making websites and do these you might think MIDI is synonymous with stuff like this just for whatever reason Windows 95 came with a bunch of like chintzy MIDI files on it.
+
+And so growing up I just sort of associated meeting with like really crappy sounding music I could play on my computer I didn't really know what else it was and and I find a lot of people today still kind of just assumed that's what it is and I have a few more just that one's pretty good and this one's like kind of infamous I guess Bryant or was an intern at Microsoft and she was asked to write this song he never got proper credit you can find a blog post about it's kind of funny that's.
+
+The funny injuring gasp could you write a song for operating system okay so mini the protocol like I said it allows musical instruments to communicate with another it's a two-way protocol so we can just just like this keyboard I have up here on my screen people can send signals to my computer I can also send signals back to it and depending on the device that I'm using it may or may not do anything with those signals but it's a two-way it's a two-way protocol it's a way for instruments communicate with one another it also it describes what's happening it describes certain types of events based on.
+
+The standards editors so they've decided that a certain combination numbers will mean that this note is on or another combination will mean this note is now off and if you're if you're a musician that constant makes nothing if you're not you can probably follow that and but the MIDI standard basically outlines hundreds of other scenarios that delve into the minutia of like electronic music ends and how to control an instrument and that's so that's what MIDI standard comes in and video sophistication what's interesting about.
+
+This is the way the standard is decided and the way it's maintained even today is not terribly dissimilar to scanners are sort of managed in our industry which i think is really interesting there are like offshoots of the MIDI standard there are like arguments over what things should represent it's kind of interesting even though the you know the protocol I mean the standard itself is a relatively simple thing and the thing it tends to be synonymous with when I talk about MIDI and a MIDI file basically just describes MIDI events.
+
+And in a sequential way like basically which MIDI events should have been when in a particular sequence the analogy I like to come up with is kind of like a piano roll or Guitar Hero is probably much more modern referenced actually like a check a slide it's kind of like that something like that that's sort of a mini file visualization this is which notes which event should happen when for how long what those events should be and then how those are interpreted comes up to.
+
+The software that is reading the MIDI file so why am I talking with me it's like it's asynchronous like JavaScript which is kind of final he talks too hard which is interesting and it's really easy to use for non musical applications okay forgot I had this break JavaScript you know native things yeah here's the most cool part the part that we can actually like go home and actually use if you're intrigued by any of this chrome speaks MIDI I have all these MIDI controllers up here on my stand my little podium plugged into my computer.
+
+And chrome can speak to those without any extension whatsoever without it I don't even have to download a special library it's not a particularly tricky way to interface and so by extension so does Chrome oh yes so this chromium electron basically Hardware out there today you can go by plugging your computer and you can start creating interesting interactions with your web pages and your projects and I think that's really cool really cool I pulled this up because I thought it was funny according to Kennedy.
+
+I ain't percent I can't earn oh yeah fifty nine percent global support which is useless but Phoenicians are in this room I'm curious okay I'd say like about MIDI is that there's a variety of hardware you feel good like hardware made in 1983 and my little adapter plug it into your computer today like the standard hasn't changed oh you know he just changes the way you plug in 1983 so there's like a world of interesting hardware that already exists that you can start interacting and that's why.
+
+I like to tell people it's a really interesting way to dip your toe into the Internet of Things you know so people are put off by breaking out the breadboard and soldering things and I totally get that like it's a little bit of a barrier to entry sometimes you just want to like I want a button over that pushed and it just sends me mail you know something goofy like that I want to be able to play with stuff that way and with MIDI we have.
+
+Now a way to talk to existing hardware to enable those kind of interactions or maybe something more interesting than what I just said and you can build your own that's right so there's like different layers of like you can do that and there's a little relatively low barrier to entry or if you really want to it you can you know go and get in our we know and get that breadboard and start solving things together and creat your own really strange elaborate MIDI controller so.
+
+I just want to show you some examples of MIDI controllers up here there are keyboards like this one which I have up on my stage is the piano basically as you can see this is actually the first commercial keyboard that supported the MIDI protocol the jupiter six we have a different sort of interface so this one's got little pads i've got this one up here also my podium and dials that we can turn those pads are also velocity sensitive so I can sort of interact with how hard.
+
+The buttons are pressed you know this is an interesting controller because it allows for different you know different ways to interact on that front I've got this one down here at the stage which I've you know set up to control my slide show a little bit and some other things later on as we'll see I left that one at home because it's really heavy expression pedals which if you're not a musician may not make any sense they're usually used regulated like volume or something while you're playing music.
+
+But it's basically like a dial for your foot on the floor this one is breath controlled you can hit the buttons it's basically like a like Star Trek flute or something but that's you know another interesting piece of hardware that's already out there that you could plug in today have interact with your browser and make interesting things this one I actually got this one in my hand right now this one is basically an accelerometer that translates the XY and z coordinates to MIDI signals and.
+
+So you can do some interesting kind of fun things with that and then you can also build your own like I said this guy who knows - this guy is I'm curious a couple of people yeah basically he built his own crazy MIDI instrument back in the 80s and I added the slide the other week because I remembered him and I thought that was kind of funny and he can build you up here's one there's someone else built that I had it home and I made a little video of it.
+
+The only reason I did not bring this one to play with this because I dropped it and it broke which is really kind of sad I know okay I know you have a very simple demo I made at home just showing a two-way interaction I hit the buttons they light up a little screen I made I click on the buttons to turn them off I was just sort of playing around are they getting to know the controller how I might be able to make interesting things with it.
+
+So let's talk about what a MIDI message actually is now that magenta color is kind of hard to read isn't it yeah well so I'll be kind of quick about it but a MIDI message consists of three bytes basically yeah three 8-bit bytes there are only two types of messages the status message begins with a 1 and all the other ones begin with a 0 the other two the status message basically except what kind of signal it is like are we playing a note are.
+
+We turning it off are we doing some of the kind of interaction with the instrument and the other ones describe further in depth like details about that interaction so if I'm playing a note which note am i playing and how hard am i pushing the button for example also to be clear you can play with MIDI and not note any of this it's really kind of irrelevant almost felt like experimenting with with hardware and and this protocol so we get seven bits left the bytes.
+
+And I'm gonna go to the next leg because it demonstrates all the textures right here a little bit more clearly oh and then here's an example of how those how the the MIDI standard maps to that protocol I just explained so it these are the like what the MIDI protocol has decided those different combinations of status and data bytes mean so this first student summon obviously notes being turned on that's being turned off and it just goes down the line it's like 128 different different sort of messages.
+
+So there's an example of a MIDI MIDI signal as you would see it written in documentation we have three bytes the first three numbers of that status symbol tell us that it's a a note that's being played on the second one tells us that it's a it maps to note number 60 in the in as a MIDI message which correlates to middle C on a keyboard and the last one tells me I'm playing it with full velocity which means I'm hitting it really really hard as far as.
+
+That translates to the standard I've sort of in pseudocode like outline what it does there and like I said earlier though you don't exactly need to know any of this to play with it at the end of the day when you get in JavaScript and you're playing on with these controllers you just get an array with three numbers and so you can kind of ignore everything I just said and know that when I push this button I'm gonna get three numbers and so let me just demonstrate.
+
+That really quick so basically what I have here is I just have a little sort of playground I've set up to play with different MIDI controllers and listen to the different signals that are coming in and out as I'm playing with it so I've got this keyboard up here I'm just going to hit this note up here see what happens okay and so if I hold this down we can see at the very top I've gotten I've got three numbers I've got one 44 48.
+
+And 106 as that maps to the the MIDI standard that's not middle C but it's a little bit lower than the C the 106 tells me I'm not hitting it very hard a little bit harder get 110 and 144 tells me that I'm that the note is on this particular demo we'll come back in a second because I'll explain how a lot of MIDI controllers are not terribly well document it and if you have something that is less straightforward than say a piano or a keyboard it might be kind of tricky to figure out what's going on.
+
+And so I pull this thing up and I just are hitting buttons and I start paying attention to what the numbers look like and then eventually you start to see some kind of logic form here okay so what does using javascript and MIDI look like it actually doesn't similar to other sort of permissions based things you do in the browser like asking for location asking for the the webcam things like that you you make a request and request and access is actually granted by default.
+
+You don't have to approve MIDI access for most pages unless you're asking for it in a very particular way that isn't worth going into here but if you wanted to disable MIDI access on all web sites you go to there's a setting for that in Chrome I've never felt a need to do that but I'm glad that it's there so the code looks like this it's not terribly dissimilar like I said you just you ask you make a request to access it returns a promise.
+
+And depending on whether or not that succeeds or fails you now have a MIDI access object that lets you know all of the inputs and outputs that you can start playing with and sending and receiving messages from it's really straightforward this is like a pseudo code example of how I had a write through all the controllers I have plugged in up here I've got about six or seven and so I sort of mapped through these and figure out what sort of nice is the the actual name of.
+
+The controllers is usually included by the hardware manufacturer so you can discern a little bit more easily what you have plugged in if you have a set up kind of like this it's nice if there's nothing like an array from like one zero to six or something and you'd be guessing all day handling a receive message kind of looks like this you didn't event and inside that event you have a data attribute and that data attribute is just an array of three numbers and so in.
+
+This particular example I'm just checking to see if the first byte is a note on message 144 and the second one I'm checking to see if it's middle C and the third one I'm checking to see if I hit really hard and if I did then I can do something yeah that's what I just said there are some libraries out there that make this interaction pretty easy it's pretty straightforward to do it in native JavaScript but if you want to the web mini des is a really good one it's instead of just playing with.
+
+The numbers and mapping those to whatever you like it actually translates the events so instead of listening for you know message number 144 I can actually say hey I want to listen for a note on event or a note off event or I won't listen for all of the events and discerning later which ones they musical kind of application it makes sense it's probably a little more straightforward and probably easier to read later okay and then MIDI utility is a way of translating these numbers into musical notes trying to do something like.
+
+That award and translating those musical notes into frequencies if you want to play with Web Audio and do some interesting interactive things there that's it as far as like interacting with MIDI and JavaScript that's really all you need to know you you ask for permission you get the callback you listen for messages and you get an array with three numbers so I mean that's not that interesting by itself so we're gonna cut the demos here in a second you can also do it's also worth mentioning real quickly.
+
+You can do it with server-side JavaScript you can do a node obviously and the only things that are different there and it's very similar but we don't need to request permission obviously Lattin can be latency it can be an issue depending on what kind of an application you're making and working with MIDI files is generally a lot easier if you're doing stuff in node because we have like hardware level access to whatever we're doing in that situation yeah we can do more interesting system level things.
+
+And requesting midian note looks kind of like this very similar examples look at this lady so I cut through the demos the talk the name of this talk is more than music with MIDI and I want to explore those but my first couple demos are music oriented so I just wanted to demo those oh yeah so the first demo I already showed you but often when I get a new new MIDI controller and the documentation might be subpar like if I buy it on Aliexpress or something like.
+
+That and it just shows up in a box I like to plug it into here and I just start hitting buttons as ridiculous as it sounds and I tried to just make sense of that and eventually you can kind of map that to some kind of logic so right now I'm turning a dial and I can see okay so 176 refers to must return to some sort of like control signal one may be the specific dial because there's eight of them up here and that.
+
+Right one is clearly like the value of the dials I turn it up and down so sometimes you have to sit down do that as ridiculous as it sounds that's not an interesting demo let's do a more fun one okay so here's a really simple synthesizer that we can make mmm-hmm pretty straightforward let's go on there's probably some more interesting ones using MIDI hardware to manipulate Web Audio is actually a really interesting way to explore interactions you know a lot of like DJ's do stuff like.
+
+This but let's see here somebody hit one of these guys should trigger a sound I'm gonna hit this one let me trigger different that's the slightly better one okay so now I've got Web Audio I'm using Web Audio to create this visualization in the background I'm using the MIDI to trigger different samples and now I can use these little dials here and start manipulating the audio in fun ways here I can play with the pitch I can play with the speed I mean obviously Web Audio is doing.
+
+The heavy lifting but the using MIDI and JavaScript allow me to create an interesting way to interface with this like in the real world alright there's another audio demo and this is the one that didn't work in the beginning again we can try this later if you like they skip this one okay so let's explore this is the the fun stuff so I want to demo some of the non musical examples of MIDI because the end of the day MIDI is just a like I said it's just three numbers.
+
+That your hardware computers send back and forth to communicate with another you can kind of decide what that means and I think it's really fun and kind of interesting so one of the things I built is I built a simple color mixer using this same little controller I have up here which I'll destroy you in a second so I can turn these dials and it's kind of hard to see because it's like there we go now it's red and I can so I'm mixing my red.
+
+Now I'm going to mix a little bit of a little bit of green in there like that kind of color just to sort of demonstrate what I'm doing there yeah I'm just turning these dials down here to mix my different colors and I'm using these buttons of green or blue kind of a simple thing this one so this is actually the first interactive JavaScript MIDI thing I made I play in a little duo back home and we wanted to sort of like interactive display behind us.
+
+What we played like some sort of artsy thing I thought it'd be fun and after a lot of exploration I accidently discovered that I could interact with MIDI and JavaScript and have it do things beyond just triggering samples and manipulating audio and doing all that stuff I could ever do pretty much anything so I made a little webpage that would take a and basically it was a random poetry generator it would take a random video and old black in my video the audio stripped and generate random poems see weird little thing.
+
+And we would trigger it with the civil controller I have down here on the stage I would just hit buttons every once in a while and have different poems and things show up behind us and I'm gonna demo it real quick because honestly I really I really enjoy this one this was this is the first project I did that really made me think hey we can use MIDI to make a lot of curious interactive things it doesn't have to be limited to like a music specific application let's see here.
+
+So I click should be on I hit one sometimes the poems are better than others let's see if we got a video No okay we got something maybe a different poem and then for the sake of this demo I added a third button there just let's figure some random audio do one more it's kind of I actually I can actually stare at this all day I think it's it's kind of a I'll explain I was made in a second but it's funny because it's sort of it sort of accidentally creates a meeting every once in a while like it's weird man hey.
+
+So we just have this playing behind us while we play music and it was it was kind of a fun thing so what's going on there just to explain real quick is it takes a random video from archive.org do they have a lot of great like public domain things there it takes a random book from Gutenberg and it basically pulls out and this is for for random sentence from that book one for the title and then three others just kind of a random and what's interesting is like.
+
+If you take random sentences from the same book you will accidentally you know it's always in the same author's voice usually you get a lot of the same characters showing up so you get weirdly like sulfur element things it's kind of interesting how that is I think I like that one that's one to shut it so here's another example my brain works in weird ways who's familiar with the Goonies okay it's funny I did this talk to you weeks ago in Ukraine and I asked.
+
+That and zero hands went up because I realized in that moment that oh you know what the Goonies is a very like American specific like pop cultural reference and I sorry the explain what the Goonies was in like two minutes and it was kind of funny I was not anticipating yeah so there's a scene in that movie where they play an organ to escape from these bad guys who are chasing them they it's they're basically stuck in this place with booby traps I can just show.
+
+You these photos this organ like this and they have to play the right chords to make a door open and escape from the bad guys basically I was thinking about that scene I thought can we actually like build that in the real world using MIDI and could we build something like that and so I did I made I made this little guy which I can't read that was a thief D sharp G sharp yiii okay oh I missed it c-sharp D and G let's see C shirt oh absolutely oh.
+
+This is awful man that sounds terrible f AAS a sharp do sir maybe have to be let's say I have to be in the right register and I'm actually forgetting what register I just sucked this dude that's too bad anyway when I do hit the chord rate to say D D F sharp G I give up anyway it did work less I made a still like thing that if you hit the records in the right she'll you win the silly little game I made I thought.
+
+Okay that's like the proof-of-concept level like that's what I'm trying to accomplish I just need to you know actually plug that into like hardware which I'm sad to say haven't done yet but it's on my list and if you go on YouTube out there you can find videos of people sinking MIDI signals to step motors and and where and interactive things like this and I realized you know if I really want to put like a weekend into it or like four weekends I could we build something just like.
+
+The goonies Oregon where you play the right chord and a door opens or something like that and this is sort of where my mind goes when I try to think of like non-musical applications for permitting goofy things like that and there's another demo I'll skip through because I know I'm starting to run a little bit long here I will try to skip ahead so I have one where I put CSS filters which is kind of interesting you can actually explore like two parameters at once which is kind of fun let's see.
+
+I have to do the program change to this one there we go if I want a CPA level I want to play with the hue rotate and so I can turn it because of the asynchronous nature of JavaScript I can turn the ones at the same time and kind of blend things like that and I don't know practical this is what's interesting but what's kind of fun is like I had another demo I didn't set up for this because it doesn't look as fun where I'm trying to control.
+
+All of the different parameters I can on it on an object using these interfaces and you know like I said I don't know if it's like practical or applicable but gets me thinking about this in a slightly different way lets me skip through to the next one here let's see I got here Oh drawing a simple image this one's actually probably worth doing so I've got some more interesting controllers up here let's see here and I realize you can't see what I'm doing but I'll show.
+
+You in a minute here there we go and so now if I skip to this guy you can see basically I have a very simple way to draw a little 8x8 bitmap image or something like that so if I were to for example bill now midi-controller make it you know many more squares by many more squares I could have a more interesting way to doodle and draw things oh this one's more interesting this is a another color mixer but instead of how I turn that off didn't not every go.
+
+So but instead of even the dials and things I've got it mapped to that accelerometer I was talking about earlier and so now I have a way of like actually just physically moving in the space and interacting with the colors it's kind of fun it's a good way it's like instant carpal tunnel if you want to like try to get certain camels and if I see something I like I can just click on this guy no it'll make a little CSS it'll spit out the color.
+
+And are ready to use be associate just kind of fun so you know if you get tired of like mixing hex numbers and like trying to eyeball hex codes and things maybe you could just plug this in try it you know anything gets you thinking a little bit outside the box I think it's kind of fun and then it's HSL which is really fun because if I hold my am straight out like that it's white I feel like it's more interesting things I could do with.
+
+This one that I haven't quite figured out yet anyway and then the other thing I like to do is I I found myself making games I feel like making games is a really good way to explore some of these concepts now it's interesting that like the the trends for last couple years towards like stateful web applications on the front end like kind of mirrors what game design has done for a very long time and there's something about like designing things as though they were a game.
+
+That makes these forces me to be much more thorough with the way I design things implement them and so I started making little games using these MIDI controllers I made one word I just take the same color thing but I try to match the color you know it's kind of a some of them are like harder to match them though got that one something them harder to match to another's anyway you get the idea usually I end up cheating at like take this off and.
+
+I go like this see if I can eventually get it sometimes it works yes that works no I didn't anyway I made witty Mac a MIDI whack-a-mole again I can have this little 8x8 pad interface down here and I was trying to give other games I could implement I thought of like the whack-a-mole game of the arcade for some reasons I made this little guy let's see here oh I'm terrible at this do you want oh we're gonna wearing a wireless hdmi there's like a delay - that's like not.
+
+This is not gonna work oh well anyway just a sort of demo though you know was interesting about that one though is I can because of the velocity that I can detect on this thing I could actually add a component where I where's his confidence down there and so it's like how confident are you whacking these moles was my thought it's silly and so that was like kind of a fun thing to build and I um way over so I'll skip ahead here and I apologize.
+
+Okay so we can see not one but this one and so one of the first programs I made was like 10 years olds I mean a ball bounced around on the screen and for whatever reason that's like my go-to like that's like my version of hello world specially I'm working with something visual I want to make a ball bounce on the screen and so I made this which is like you know normal DJ equipment and I can tap that to start a little ball that's.
+
+Okay that's great it's like oh well it's like upside-down the way you're looking at it I realized but there we go it's kind of fun and then I can add another one and now they started interacting with one another when they get in touch it's kind of a fun non-musical demo to try to build this one I'm just gonna jump straight to the last one I'm sorry and then the most interesting one that I made was who plays go the game go here do you people it's it's a good nerd game.
+
+I feel like there's usually some people okay so I started think what I can make with Nate might bored and I thought I can make checkers and I can make chess I thought well I could make like sort of a tinier version ago that might be an interesting thing and so that's what I did I use this launchpad and I found an existing go project out there which is really fabulous called tanuki and what I like about this one so now I've got a functional 8x8 game of go.
+
+That we can play and I'm terrible at go so give me a minute here to do this okay okay yeah there we go so you can and what I like about this demo is because this particular library that I found works on the front end and it also works on the server side in combination with those tiny computers I was talking about earlier I have like a standalone version of this that I could theoretically bring to parties like very lame parties I suppose but so.
+
+I know my digital go on its own little computer it powered by like a battery that I can bring to parties and you know so these are the sort of things I end up making like I said really really useful practical things you guys can use let's see basically someone has repurposed these things to create a giant interactive musical instrument they're huge and it's a lot of fun I was there that day and we organized kids and we started playing like twinkle twinkle and things like.
+
+That is great and these are the sort of things I love I love when people take something that was in this case like not intended for music at all and completely repurpose it shows a type of creativity and just outside the box thinking that I think is I mean not only fun and pleasant enjoyable but I think it actually makes us better developers to like take time to explore and have fun play basically you know take a break from whatever we're doing from work and do something.
+
+That uses a slightly different part of a brain I have a demo of what that sounds like so at the end of my talk thank you guys for bearing with something you.
+
+</details>

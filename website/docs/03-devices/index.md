@@ -20,7 +20,7 @@ p5.js, Python Mode and Java, the raw version with no helper, known quirks, and w
 | [Anything else](./anything-else.md) | whatever shows up as a MIDI device | whatever it sends. The Explorer tells you |
 
 Not sure what yours sends? [The Explorer](/the-explorer/) decodes every message and prints the
-device's exact name.
+device's exact name. Have nothing yet? [Getting a device](./getting-one.md) says where to look.
 
 ## Add a device
 

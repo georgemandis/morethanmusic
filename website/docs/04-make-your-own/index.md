@@ -24,6 +24,12 @@ and rules in most of what Adafruit and Arduino sell now.
 The code for each is in the `firmware/` folder of this site's repo, laid out as a repo of its own with
 a README, flash steps and a licence.
 
+Boards without a page here that take the same three steps: a [Teensy](https://www.pjrc.com/teensy/td_midi.html),
+which has a USB MIDI mode in its Arduino board menu; any board that runs
+[CircuitPython](https://learn.adafruit.com/welcome-to-circuitpython), where `usb_midi` is built in the
+way the Trinkey page uses it; and any Bluetooth [Espruino](https://www.espruino.com/MIDI) board, the way
+the Puck.js page uses `ble_midi`.
+
 ## Read sensors
 
 Read in a loop. Scale the reading to 0..127: a 10-bit analog read shifted right by 3, a 16-bit one by

@@ -93,6 +93,8 @@ so they stay off the table above.
 
 - The old landing page, midi.mand.is, now forwards to
   [george.mand.is/javascript-webmidi-tiny-computers](https://george.mand.is/javascript-webmidi-tiny-computers).
+  Its lists of controllers, boards and libraries live on here as [Getting a device](/devices/getting-one/),
+  [Make your own](/make-your-own/) and [Something else](/pick-your-tool/something-else/).
   It has the JSFoo recording, the controller shopping list, and the library links from the era.
 - The sources for every entry, and the assumptions made where sources disagree, are in
   [talks/INDEX.md](https://github.com/georgemandis/morethanmusic/blob/main/talks/INDEX.md)

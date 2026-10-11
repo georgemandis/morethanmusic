@@ -66,5 +66,5 @@ the [Processing Java](/pick-your-tool/processing-java/) path. It needs no browse
 Every starter runs without one. PipSqueak: arrow keys and space. Midi Fighter: `1234` `qwer` `asdf`
 `zxcv`. Circuit Playground: `1` to `8` and the mouse. Launchpad: click a cell, `c` clears. Anything
 else: letters are notes, drag the mouse for a knob. Each device page lists its own. The Explorer has
-fake devices: add `?fake=3` to its URL for a PipSqueak, `1` to `7` for the rest. [Devices](/devices/)
+fake devices: add `?fake=3` to its URL for a PipSqueak, `1` to `7` for the rest. [Getting a device](/devices/getting-one/)
 says where to buy the real ones.

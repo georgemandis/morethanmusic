@@ -18,10 +18,17 @@ handler is the whole thing. The 2019 CSS-Tricks article walks through it:
 The p5 helper's MIDI plumbing, `MidiCore` inside `midi-helpers.js`, is plain JavaScript too and runs
 without p5 on the page.
 
+Two libraries George has used for the plain-JavaScript demos: [WebMidi.js](https://github.com/djipco/webmidi),
+which wraps the API with named notes and events, and [MIDIVal](https://midival.github.io/), written in
+TypeScript. The browser support table is at [caniuse.com/midi](https://caniuse.com/midi). The shims
+and plugins from the 2017 talks, which stood in for browsers without Web MIDI, are not needed for
+Chrome, Edge or Firefox now.
+
 ## Node
 
-The demos from the 2017 talks ran Node servers next to the browser. They are listed, as given,
-under [Talks and workshops](/talks/).
+The demos from the 2017 talks ran Node servers next to the browser, reading the device with the
+`midi` and `easymidi` packages from npm. They are listed, as given, under
+[Talks and workshops](/talks/).
 
 ## Python outside Processing
 

@@ -46,4 +46,5 @@ Mandis and a link to this site. Both licences are in the repo as
 
 ## Who
 
-George Mandis. [george.mand.is](https://george.mand.is).
+George Mandis. [george.mand.is](https://george.mand.is). New work on this site goes out in
+[/dev/random](https://buttondown.com/georgemandis), the newsletter.

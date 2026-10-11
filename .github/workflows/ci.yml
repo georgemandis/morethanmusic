@@ -83,12 +83,11 @@ jobs:
         run: midi-helpers/processing-library/test.sh quick
       - name: the sketches hold current copies of the tabs
         run: midi-helpers/sync.sh --check
-      - name: the hosted copies match a rebuild of the archives
+      - name: the hosted copies match a rebuild (zips by content, since their bytes differ by machine)
         run: |
           midi-helpers/release.sh --check
-          V="$(cat midi-helpers/VERSION)"
-          diff "midi-helpers/dist/$V/SHA256SUMS" "website/static/mtm-midi-helpers/$V/SHA256SUMS"
-          diff "midi-helpers/dist/$V/SHA256SUMS" website/static/mtm-midi-helpers/latest/SHA256SUMS
+          midi-helpers/test/hosted-check.sh
+          midi-helpers/hosted-check.sh
 
   site:
     name: site build

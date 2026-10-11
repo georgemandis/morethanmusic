@@ -1,6 +1,6 @@
 # arduino-midiusb-starter
 
-<!-- repo: pending -->
+Repo: <https://github.com/georgemandis/arduino-midiusb-starter>
 
 One button, one knob, one LED. The smallest USB MIDI device worth plugging in, for any Arduino-style
 board with native USB. No driver on the computer: the MIDIUSB library makes the board a

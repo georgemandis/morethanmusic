@@ -1,6 +1,6 @@
 # trinkey-midi
 
-<!-- repo: pending -->
+Repo: <https://github.com/georgemandis/trinkey-midi>
 
 CircuitPython firmware that turns Adafruit's Slide Trinkey M0 and Rotary Trinkey M0 into USB MIDI
 controllers. No library on the board, no driver on the computer: `usb_midi` writes the three bytes

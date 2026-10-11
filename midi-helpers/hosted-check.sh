@@ -15,16 +15,20 @@ STATIC="${STATIC:-$HERE/../website/static/mtm-midi-helpers}"
 fail=0
 T="$(mktemp -d)"; trap 'rm -rf "$T"' EXIT
 
-# The entries of a zip, then the hash of each non-jar entry; a jar's own entry names follow.
+# The entries of a zip, then the hash of each non-jar file; a jar lists its own entry names. The zip is
+# extracted to a folder first: streaming entries out with unzip -p gave an empty jar on Linux.
 zipdigest() {
-  local z="$1" e
-  unzip -Z1 "$z" | LC_ALL=C sort
-  while IFS= read -r e; do
-    case "$e" in */) ;;
-      *.jar) echo "$e:"; unzip -p "$z" "$e" > "$T/inner.jar"; unzip -Z1 "$T/inner.jar" | LC_ALL=C sort | sed 's/^/  /' ;;
-      *) echo "$e $(unzip -p "$z" "$e" | shasum -a 256 | cut -c1-64)" ;;
+  local z="$1" d f
+  d="$(mktemp -d "$T/zip.XXXXXX")"
+  unzip -q -o -d "$d" "$z" < /dev/null
+  (cd "$d" && find . -mindepth 1 | sed 's#^\./##' | LC_ALL=C sort)
+  while IFS= read -r f; do
+    case "$f" in
+      *.jar) echo "$f:"; unzip -Z1 "$d/$f" < /dev/null | LC_ALL=C sort | sed 's/^/  /' ;;
+      *) echo "$f $(shasum -a 256 < "$d/$f" | cut -c1-64)" ;;
     esac
-  done < <(unzip -Z1 "$z" | LC_ALL=C sort)
+  done < <(cd "$d" && find . -type f | sed 's#^\./##' | LC_ALL=C sort)
+  rm -rf "$d"
 }
 
 for dir in "$STATIC/$V" "$STATIC/latest"; do

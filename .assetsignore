@@ -1,0 +1,14 @@
+.git
+.gitignore
+.wrangler
+node_modules
+.DS_Store
+*.class
+wrangler.jsonc
+deploy.sh
+midi-helpers/test
+__pycache__
+*.pyc
+website/node_modules
+website/.docusaurus
+website/build

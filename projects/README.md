@@ -1,6 +1,6 @@
 # projects
 
-The PipSqueak ideas from https://pcd2026.mand.is/project-ideas, built. Each one in Java mode (`java/`), Python Mode
+The PipSqueak ideas from https://morethanmusic.dev/examples/project-ideas/, built. Each one in Java mode (`java/`), Python Mode
 (`python/`) and p5.js (`p5/`). Most are under 60 lines. Each includes the "then" step from the
 idea, so you can see where the small version goes. Open one, play, then make it yours. Lines
 marked `change this` are the knobs.

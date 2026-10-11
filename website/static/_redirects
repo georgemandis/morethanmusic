@@ -1,0 +1,40 @@
+# One Worker serves the site and the repo folders beside it. These rules run before the assets.
+# Short paths from the 2026 deck and the printed QR codes.
+/explorer         /explorer/web/                      302
+/explorer/        /explorer/web/                      302
+/helpers.js       /mtm-midi-helpers/latest/midi-helpers.js  302
+/projects-live    /examples/demos/                    302
+/projects-live/   /examples/demos/                    302
+# /examples/ is the Examples section now. The old shortcuts into the p5 starters folder still work.
+/examples/pipsqueak            /starters/p5/pipsqueak/            302
+/examples/pipsqueak/           /starters/p5/pipsqueak/            302
+/examples/circuit-playground   /starters/p5/circuit-playground/   302
+/examples/circuit-playground/  /starters/p5/circuit-playground/   302
+/examples/midi-fighter         /starters/p5/midi-fighter/         302
+/examples/midi-fighter/        /starters/p5/midi-fighter/         302
+/examples/launchpad            /starters/p5/launchpad/            302
+/examples/launchpad/           /starters/p5/launchpad/            302
+/examples/anything-else        /starters/p5/anything-else/        302
+/examples/anything-else/       /starters/p5/anything-else/        302
+# Pages of the PCD 2026 workshop site, at their new homes.
+/before-you-start            /                                    301
+/before-you-start/           /                                    301
+/start-here                  /                                    301
+/start-here/                 /                                    301
+/agenda                      /talks/pcd-2026-nyc/                 301
+/agenda/                     /talks/pcd-2026-nyc/                 301
+/introduction-to-midi        /start-here/introduction-to-midi/    301
+/introduction-to-midi/       /start-here/introduction-to-midi/    301
+/hello-world                 /examples/hello-world/               301
+/hello-world/                /examples/hello-world/               301
+/three-bytes-no-helpers      /examples/three-bytes-no-helpers/    301
+/three-bytes-no-helpers/     /examples/three-bytes-no-helpers/    301
+/project-ideas               /examples/project-ideas/             301
+/project-ideas/              /examples/project-ideas/             301
+/demos                       /examples/demos/                     301
+/demos/                      /examples/demos/                     301
+/references                  /examples/references/                301
+/references/                 /examples/references/                301
+/your-device                 /devices/                            301
+/your-device/                /devices/                            301
+/your-device/*               /devices/:splat                      301

@@ -16,6 +16,22 @@ work in the p5.js web editor.
 | anything else | `AnyMidi.pde` | `anymidi.py` | `anymidi.js` | whatever you pass, or every input |
 | everything at once | - | - | `midi-helpers.js` | - |
 
+## Install
+
+Three ways in, same API. Version numbers move together; see `CHANGELOG.md`.
+
+| | Install | Then |
+|---|---|---|
+| p5.js, one tag | `<script src="https://morethanmusic.dev/mtm-midi-helpers/latest/midi-helpers.js"></script>` | `new PipSqueak()` |
+| p5.js, module | `npx jsr add @georgemandis/mtm-midi-helpers` or `npm install mtm-midi-helpers` | `import { PipSqueak } from "@georgemandis/mtm-midi-helpers"` (npm: `"mtm-midi-helpers"`) |
+| Processing Java, library | Sketch > Import Library > Manage Libraries, search `midihelpers` (or unzip `midihelpers.zip` into the sketchbook's `libraries/`) | `import midihelpers.*;` |
+| Processing Java, tabs | copy `MidiCore.pde` and the device tab into the sketch folder | nothing |
+| Python Mode | download `mtm-midi-helpers-python-1.0.0.zip`, copy `midicore.py` and the module next to the `.pyde` | `from pipsqueak import PipSqueak` |
+
+Downloads: `https://morethanmusic.dev/mtm-midi-helpers/latest/` (the versioned folder `1.0.0/` keeps
+working after the next release). The library build lives in `processing-library/`, the zip script in
+`python/zip.sh`, `release.sh` runs everything and lays the copies into the site.
+
 ## In the IDE
 
 Java mode: copy `MidiCore.pde` and the device tab into the sketch folder, or drag them onto the IDE window.
@@ -394,7 +410,7 @@ In the p5.js web editor (editor.p5js.org, in Chrome, Edge or Opera): open `index
 files panel and add, after the p5 tag,
 
 ```html
-<script src="https://pcd2026.mand.is/midi-helpers/p5/midi-helpers.js"></script>
+<script src="https://morethanmusic.dev/mtm-midi-helpers/latest/midi-helpers.js"></script>
 ```
 
 Write the sketch as above. Press Play, click the canvas once. The browser asks for MIDI permission the
@@ -506,7 +522,7 @@ Python Mode Jython jar.
   zero". `value` is 0 meanwhile. Both boards' touch pads use the same `touchPressed()` callback.
 - The p5 web editor's preview iframe allows Web MIDI (from the editor's source, not yet a click-through).
   The recipe keeps full-screen preview and download as fallbacks. Chrome asks for permission on first use.
-  Safari and Firefox have no Web MIDI.
+  Safari has no Web MIDI; Firefox 108 and later asks to install a site permission first.
 - Nothing outside `midi-helpers/` was edited by hand. `sync.sh` writes helper copies into sketches that ask
   for them.
 
@@ -517,7 +533,11 @@ midi-helpers/
   java/      MidiCore.pde PipSqueak.pde MidiFighter.pde Launchpad.pde CircuitPlayground.pde AnyMidi.pde Trinkeys.pde
   python/    midicore.py pipsqueak.py midifighter.py launchpad.py circuitplayground.py anymidi.py trinkeys.py
   p5/        pipsqueak.js midifighter.js launchpad.js circuitplayground.js anymidi.js trinkeys.js midi-helpers.js (built)
-  p5/src/    midicore.js + one source per device      p5/build.sh
+  p5/src/    midicore.js + one source per device      p5/build.sh (also writes midi-helpers.mjs, the ESM entry)
+  p5/        package.json jsr.json README.md           the mtm-midi-helpers package (npm, JSR)
+  processing-library/   library.properties generate.mjs build.sh test.sh examples/   the midihelpers library
+  python/zip.sh README-install.md                      the Python Mode download
+  VERSION CHANGELOG.md LICENSE release.sh              one version across the three; release.sh builds and copies to the site
   test/java/build.sh MidiHelpersTest.java      test/python/run.sh run_tests.py      test/p5/run.sh run_tests.js
   sync.sh    HARDWARE-CHECKLIST.md   README.md (this file)
 ```

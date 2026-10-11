@@ -22,11 +22,11 @@ mouse. API reference: `../../midi-helpers/README.md`.
 ## Three ways to run one
 
 Each `index.html` loads the helpers from the repo (`../../../midi-helpers/p5/midi-helpers.js`) and, when
-that path does not exist, from `https://pcd2026.mand.is/midi-helpers/p5/midi-helpers.js`.
+that path does not exist, from `https://morethanmusic.dev/mtm-midi-helpers/latest/midi-helpers.js`.
 p5 itself comes from cdnjs, so you need to be online.
 
 ### 1. Open it live
-`https://pcd2026.mand.is/starters/p5/pipsqueak/` (same path for the others). From
+`https://morethanmusic.dev/starters/p5/pipsqueak/` (same path for the others). From
 a checkout, serve the repo over http:
 
 ```
@@ -49,7 +49,7 @@ Edit `sketch.js` in any editor and reload.
 The preview is an iframe, so the first click has to land on the canvas. If Chrome asks for MIDI permission,
 answer in the bar at the top of the editor, not in the preview.
 
-Chrome, Edge and Opera have Web MIDI. Safari and Firefox do not; the sketches still run there on the
+Chrome, Edge and Opera have Web MIDI; Firefox 108 and later asks to install a site permission first. Safari does not have it; the sketches still run there on the
 keyboard stand-ins and the status line says Web MIDI is unavailable.
 
 ## Assumptions

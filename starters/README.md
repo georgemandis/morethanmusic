@@ -2,7 +2,7 @@
 
 One short sketch per device, in Java mode (`java/`), Python Mode (`python/`) and p5.js (`p5/`). Under 40
 lines each. Runs with nothing plugged in. Edit the lines marked `change this`. `raw/` has the same devices
-with no helper library. Things to build next: https://pcd2026.mand.is/project-ideas
+with no helper library. Things to build next: https://morethanmusic.dev/examples/project-ideas/
 
 One doc per device covers all three languages.
 

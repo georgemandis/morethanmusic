@@ -1,0 +1,57 @@
+{
+  "name": "mtm-midi-helpers",
+  "version": "1.0.0",
+  "description": "More than Music with MIDI: one class per MIDI device for p5.js and the browser. PipSqueak, Midi Fighter, Launchpad Mini MK3, Circuit Playground, Trinkeys, and AnyMidi for everything else. Web MIDI, no dependencies.",
+  "license": "MIT",
+  "author": "George Mandis (https://george.mand.is)",
+  "homepage": "https://morethanmusic.dev/helpers/",
+  "main": "midi-helpers.mjs",
+  "browser": "midi-helpers.js",
+  "unpkg": "midi-helpers.js",
+  "jsdelivr": "midi-helpers.js",
+  "exports": {
+    ".": "./midi-helpers.mjs",
+    "./*": "./*"
+  },
+  "files": [
+    "midi-helpers.js",
+    "midi-helpers.mjs",
+    "pipsqueak.js",
+    "midifighter.js",
+    "launchpad.js",
+    "circuitplayground.js",
+    "anymidi.js",
+    "trinkeys.js",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "./build.sh",
+    "test": "bash ../test/p5/run.sh",
+    "prepack": "cp ../LICENSE LICENSE && ./build.sh"
+  },
+  "keywords": [
+    "midi",
+    "web-midi",
+    "p5",
+    "p5js",
+    "processing",
+    "launchpad",
+    "midi-fighter",
+    "pipsqueak",
+    "circuit-playground",
+    "trinkey"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/georgemandis/morethanmusic.git",
+    "directory": "midi-helpers/p5"
+  },
+  "bugs": {
+    "url": "https://github.com/georgemandis/morethanmusic/issues"
+  }
+}

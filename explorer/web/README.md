@@ -1,8 +1,8 @@
 # MIDI Explorer, web edition
 
 The browser twin of `explorer/MidiExplorer`. One HTML file, one p5.js sketch, raw Web MIDI, no
-bundler, nothing to install. Open it in Chrome, Edge or Opera on any machine. Firefox and Safari
-have no Web MIDI and get a message saying so.
+bundler, nothing to install. Open it in Chrome, Edge or Opera on any machine, or Firefox 108 and later
+after it asks to install a site permission. Safari has no Web MIDI and gets a message saying so.
 
 Same screen as the Processing edition. Inputs, outputs and the send panel on the left. Pictures
 over the log on the right. Dark, big type, readable from the back row.

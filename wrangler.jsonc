@@ -1,0 +1,14 @@
+{
+  // morethanmusic.dev as a static-assets Worker. Deploy with ./deploy.sh (builds first).
+  // The custom domain below makes wrangler create the DNS record and certificate on deploy.
+  // Preview: wrangler.preview.jsonc. The old workshop host: pcd2026/wrangler.jsonc (a redirect).
+  "name": "morethanmusic",
+  "compatibility_date": "2026-09-15",
+  "workers_dev": false,
+  "routes": [{ "pattern": "morethanmusic.dev", "custom_domain": true }],
+  "assets": {
+    "directory": "website/build",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  }
+}

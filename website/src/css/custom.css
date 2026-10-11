@@ -1,0 +1,54 @@
+/* Workshop site overrides. The three bytes of a MIDI message are the recurring colour motif. */
+:root {
+  --ifm-color-primary: #1f6fd8;
+  --ifm-color-primary-dark: #1c64c2;
+  --ifm-color-primary-darker: #1a5eb7;
+  --ifm-color-primary-darkest: #164e97;
+  --ifm-color-primary-light: #3a80dd;
+  --ifm-color-primary-lighter: #4789df;
+  --ifm-color-primary-lightest: #6ea2e7;
+  --ifm-code-font-size: 90%;
+  --ifm-font-family-base: Charter, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --ifm-font-size-base: 105%;
+  --ifm-line-height-base: 1.6;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --byte-status: #c8285d;
+  --byte-data1: #1f6fd8;
+  --byte-data2: #a86400;
+}
+[data-theme='dark'] {
+  --ifm-color-primary: #6aa6ff;
+  --ifm-color-primary-dark: #4a92ff;
+  --ifm-color-primary-darker: #3a88ff;
+  --ifm-color-primary-darkest: #0a6aff;
+  --ifm-color-primary-light: #8abaff;
+  --ifm-color-primary-lighter: #9ac4ff;
+  --ifm-color-primary-lightest: #cae0ff;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+  --byte-status: #ff6b9a;
+  --byte-data1: #6aa6ff;
+  --byte-data2: #f0b74a;
+}
+h1, h2, h3, h4, .navbar__title { font-family: var(--ifm-font-family-base); letter-spacing: -0.01em; }
+
+/* The three bytes */
+.bytes { display: flex; gap: .6rem; margin: 1.4rem 0 1.6rem; font-family: var(--ifm-font-family-monospace); }
+.bytes > div { flex: 1 1 0; text-align: center; border-top: 4px solid; padding-top: .45rem; min-width: 0; }
+.bytes b { display: block; font-size: 2.6rem; line-height: 1; font-weight: 700; letter-spacing: -.02em; }
+.bytes span { display: block; font-family: var(--ifm-font-family-base); font-size: .85rem; color: var(--ifm-color-emphasis-700); margin-top: .4rem; line-height: 1.3; }
+.bytes .status { border-color: var(--byte-status); color: var(--byte-status); }
+.bytes .data1 { border-color: var(--byte-data1); color: var(--byte-data1); }
+.bytes .data2 { border-color: var(--byte-data2); color: var(--byte-data2); }
+@media (min-width: 997px) { .bytes b { font-size: 4rem; } }
+.b-status { color: var(--byte-status); font-weight: 700; }
+.b-data1 { color: var(--byte-data1); font-weight: 700; }
+.b-data2 { color: var(--byte-data2); font-weight: 700; }
+
+/* Images carried over from the 2019 site */
+.markdown img { border-radius: 8px; max-height: 420px; }
+
+/* Talk name under the Agenda heading */
+.talk-hero { margin: -0.5rem 0 1.8rem; padding: 0 0 1.2rem; border-bottom: 1px solid var(--ifm-color-emphasis-300); }
+.talk-hero .talk-title { font-size: 1.6rem; font-weight: 700; line-height: 1.2; margin: 0 0 .3rem; letter-spacing: -.01em; }
+.talk-hero .talk-meta { margin: 0; color: var(--ifm-color-emphasis-700); font-size: 1.02rem; }
+@media (min-width: 997px) { .talk-hero .talk-title { font-size: 2rem; } }

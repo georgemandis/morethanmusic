@@ -1,0 +1,5 @@
+dist/
+processing-library/build/
+python/build/
+p5/LICENSE
+p5/*.tgz

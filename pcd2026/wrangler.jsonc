@@ -1,0 +1,10 @@
+{
+  // pcd2026.mand.is, the PCD 2026 workshop host, as a redirect to morethanmusic.dev. Same Worker name as
+  // the workshop site had, so deploying this replaces the site and keeps the custom domain.
+  // Deploy with pcd2026/deploy.sh. Test with: node pcd2026/test.mjs
+  "name": "pcd-midi-workshop",
+  "main": "worker.js",
+  "compatibility_date": "2026-09-15",
+  "workers_dev": true,
+  "routes": [{ "pattern": "pcd2026.mand.is", "custom_domain": true }]
+}

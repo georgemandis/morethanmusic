@@ -3,3 +3,8 @@ __pycache__/
 *.class
 *$py.class
 node_modules/
+.wrangler/
+website/.docusaurus/
+website/build/
+website/.repo-links/
+.superpowers/

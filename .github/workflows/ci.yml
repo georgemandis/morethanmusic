@@ -1,0 +1,129 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+# The three helper suites and the site build. Nothing here publishes; see RELEASE.md for that.
+jobs:
+  p5:
+    name: p5 helpers (node)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: rebuild the bundles and run the suite
+        run: midi-helpers/test/p5/run.sh
+      - name: the committed bundles match the sources
+        run: git diff --exit-code -- midi-helpers/p5
+      - name: npm pack (dry run)
+        working-directory: midi-helpers/p5
+        run: cp ../LICENSE LICENSE && npm pack --dry-run
+      - name: jsr publish (dry run)
+        working-directory: midi-helpers/p5
+        run: npx -y jsr publish --dry-run --allow-dirty
+
+  python:
+    name: Python Mode helpers (CPython + Jython)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - name: jython 2.7 (the runtime Python Mode ships)
+        uses: actions/cache@v4
+        id: jython
+        with:
+          path: ~/jython-standalone-2.7.3.jar
+          key: jython-standalone-2.7.3
+      - if: steps.jython.outputs.cache-hit != 'true'
+        run: curl -fsSL -o ~/jython-standalone-2.7.3.jar https://repo1.maven.org/maven2/org/python/jython-standalone/2.7.3/jython-standalone-2.7.3.jar
+      - name: run the suite under both
+        run: midi-helpers/test/python/run.sh
+        env:
+          JYTHON_JAR: /home/runner/jython-standalone-2.7.3.jar
+      - name: zip the modules
+        run: midi-helpers/python/zip.sh
+
+  java:
+    name: Java tabs + Processing library
+    runs-on: ubuntu-latest
+    env:
+      PROCESSING_CORE: /home/runner/core-4.5.6.jar
+      JAVA_TOOL_OPTIONS: -Djava.awt.headless=true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Processing core.jar (Maven Central)
+        uses: actions/cache@v4
+        id: core
+        with:
+          path: ~/core-4.5.6.jar
+          key: processing-core-4.5.6
+      - if: steps.core.outputs.cache-hit != 'true'
+        run: curl -fsSL -o ~/core-4.5.6.jar https://repo1.maven.org/maven2/org/processing/core/4.5.6/core-4.5.6.jar
+      - name: tabs compile and the suite passes
+        run: midi-helpers/test/java/build.sh
+      - name: library builds
+        run: midi-helpers/processing-library/build.sh
+      - name: library checks (no Processing.app on the runner, so no CLI build step)
+        run: midi-helpers/processing-library/test.sh quick
+      - name: the sketches hold current copies of the tabs
+        run: midi-helpers/sync.sh --check
+      - name: the hosted copies match a rebuild of the archives
+        run: |
+          midi-helpers/release.sh --check
+          V="$(cat midi-helpers/VERSION)"
+          diff "midi-helpers/dist/$V/SHA256SUMS" "website/static/mtm-midi-helpers/$V/SHA256SUMS"
+          diff "midi-helpers/dist/$V/SHA256SUMS" website/static/mtm-midi-helpers/latest/SHA256SUMS
+
+  site:
+    name: site build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: website/package-lock.json
+      - run: npm ci
+        working-directory: website
+      - run: npm run build
+        working-directory: website
+
+  deploy:
+    name: deploy morethanmusic.dev
+    needs: [p5, python, java, site]
+    if: github.ref == 'refs/heads/main' && github.repository == 'georgemandis/morethanmusic'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: is there a Cloudflare token
+        id: token
+        run: echo "present=${{ secrets.CLOUDFLARE_API_TOKEN != '' }}" >> "$GITHUB_OUTPUT"
+      - name: build and deploy (skipped until CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID are set)
+        if: steps.token.outputs.present == 'true'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          (cd website && npm ci)
+          ./build-site.sh
+          npx -y wrangler@4.149.0 deploy -c wrangler.jsonc

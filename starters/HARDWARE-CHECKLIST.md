@@ -51,7 +51,7 @@ spot-check one of each.
 - [ ] Serve the repo (`python3 -m http.server 8765`), open each `starters/p5/<device>/` with nothing plugged
       in: canvas, status line "click to connect MIDI", a click turns it into "no MIDI device matching",
       keyboard stand-in works, no console errors.
-- [ ] After deploy, `https://pcd2026.mand.is/midi-helpers/p5/midi-helpers.js`
+- [ ] After deploy, `https://morethanmusic.dev/mtm-midi-helpers/latest/midi-helpers.js`
       answers (404 before). Download one starter folder, double-click `index.html`: draws and connects.
       Console shows one failed request for the relative path and nothing else.
 - [ ] Paste `pipsqueak/index.html` + `sketch.js` into editor.p5js.org: same behaviour.

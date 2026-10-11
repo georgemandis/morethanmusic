@@ -1,0 +1,22 @@
+{
+  "name": "@georgemandis/mtm-midi-helpers",
+  "version": "1.0.0",
+  "license": "MIT",
+  "exports": "./midi-helpers.mjs",
+  "publish": {
+    "include": [
+      "midi-helpers.mjs",
+      "midi-helpers.js",
+      "pipsqueak.js",
+      "midifighter.js",
+      "launchpad.js",
+      "circuitplayground.js",
+      "anymidi.js",
+      "trinkeys.js",
+      "src/",
+      "README.md",
+      "LICENSE",
+      "jsr.json"
+    ]
+  }
+}

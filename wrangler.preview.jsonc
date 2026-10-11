@@ -1,0 +1,13 @@
+{
+  // Preview of the resource site as a static-assets Worker on workers.dev only. Deploy with: ./deploy-preview.sh
+  // No custom domain and no routes on purpose: George connects morethanmusic.dev himself when the site is ready.
+  // The PCD 2026 Worker (pcd-midi-workshop, wrangler.jsonc, deploy.sh) is a different Worker and stays as it is.
+  "name": "morethanmusic-preview",
+  "compatibility_date": "2026-09-15",
+  "workers_dev": true,
+  "assets": {
+    "directory": "website/build",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  }
+}

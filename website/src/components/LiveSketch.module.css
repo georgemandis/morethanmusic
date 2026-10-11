@@ -1,0 +1,15 @@
+.box { margin: 1rem 0 1.5rem; }
+.note { font-size: 0.9rem; color: var(--ifm-color-emphasis-700); margin: 0 0 0.5rem; }
+.frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #111;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.frame iframe { display: block; border: 0; flex: none; transform-origin: center center; }
+.links { margin: 0.5rem 0 0; font-size: 0.9rem; }

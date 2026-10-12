@@ -6,7 +6,7 @@ date_end: 2018-04-20
 venue: MiXiT
 city: Lyon, France
 kind: talk
-summary: Lyon in April. The only recording that lives on Vimeo, and the deck commit says "ready for mixit" the day of.
+summary: Lyon in April. The only recording that lives on Vimeo.
 video: https://vimeo.com/269818334
 links:
   video: https://vimeo.com/269818334
@@ -15,12 +15,8 @@ links:
 
 ## What happened
 
-MiXiT's speaker page for 2018 lists the talk under its full name, "Make More Than Music with MIDI,
-JavaScript & Tiny Computers", in English. The deck has "ready for mixit" on 2018-04-20, with a
-"thank you slide" and "final additions" the same day, and the media folder has a `lyon.jpg`.
-
-The recording is on Vimeo rather than YouTube.
-Vimeo will not hand its captions to a script without a login. The talks page links it.
+MiXiT lists the talk under its full name, "Make More Than Music with MIDI, JavaScript & Tiny
+Computers". The recording is on Vimeo.
 
 ## Sources
 

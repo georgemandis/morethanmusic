@@ -1,6 +1,6 @@
 ---
 title: "NEJS Conf, Omaha"
-description: "First time in Omaha. The deck's git history starts here, \"Initial commit circa NEJS\", and the recording is the cleanest of the 2017 run."
+description: "First time in Omaha. The deck's git history starts the week after this one."
 slug: /talks/2017-nejs-conf-omaha/
 sidebar_label: "NEJS Conf 2017"
 sidebar_position: 20170720
@@ -10,7 +10,7 @@ sidebar_position: 20170720
 
 # NEJS Conf, Omaha
 
-First time in Omaha. The deck's git history starts here, "Initial commit circa NEJS", and the recording is the cleanest of the 2017 run.
+First time in Omaha. The deck's git history starts the week after this one.
 
 | | |
 |---|---|
@@ -20,23 +20,16 @@ First time in Omaha. The deck's git history starts here, "Initial commit circa N
 | Video | [youtube.com/watch?v=h-kNLD6nBeA](https://www.youtube.com/watch?v=h-kNLD6nBeA) |
 | Event page | [2017.nejsconf.com/speakers/george-mandis](https://2017.nejsconf.com/speakers/george-mandis/) |
 
-No slides for this one are published.
+No published slides.
 
 <iframe src="https://www.youtube-nocookie.com/embed/h-kNLD6nBeA" title="NEJS Conf, Omaha, NEJS Conf 2017" style={{width: '100%', aspectRatio: '16 / 9', border: 0}} allow="encrypted-media; picture-in-picture" allowFullScreen />
 
 ## What happened
 
-The reveal.js deck got its own git repo a week after this one, on 2017-07-29, with the commit
-message "Initial commit circa NEJS". Most of the demo repos share that date. So this is the version
-of the talk that got frozen as the baseline.
-
-The recording opens with the fun facts I used to lead with: first time in Omaha, a year as a digital
-nomad in 18 countries, born in Saudi Arabia, and the marathon in North Korea I accidentally cheated
-at. Then the talk. The captions call me "Jorge mandus" throughout, which I have decided to keep.
-
-NebraskaJS posted the video on 2017-09-29 with the full abstract in the description: "Tiny computers
-such as the RaspberryPi, Arduino and C.H.I.P. have finally reached a level of performance and
-affordability that makes hardware experimentation accessible to everyone."
+The reveal.js deck got its own git repo a week later, "Initial commit circa NEJS", and most of the
+demo repos share that date. NebraskaJS posted the recording on 2017-09-29 with the abstract: "Tiny
+computers such as the RaspberryPi, Arduino and C.H.I.P. have finally reached a level of performance
+and affordability that makes hardware experimentation accessible to everyone."
 
 ## Sources
 

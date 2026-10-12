@@ -14,14 +14,11 @@ stages since 2017.
 It started as a talk called Make More Than Music with Tiny Computers, JavaScript and MIDI. It was
 given ten times in 2017 and 2018, turned into a workshop with a Circuit Playground on every
 desk, became an article for CSS-Tricks, went quiet for a while, and came back in 2026 as a workshop
-for Processing Community Day in New York with chess on a Launchpad and fireworks on a Midi Fighter.
-The idea never changed. The hardware got cheaper and the browsers got better.
+for Processing Community Day in New York.
 
-This page is the timeline. Each entry has the date, the venue, the recording where one exists, the
-slides where they are published. Three old workshop
-sites went offline when their GitHub Pages builds disappeared, so their pages are re-hosted here, as
-they were. No date or venue on these pages comes from memory. Every one has a source, and the
-entry says what the source is.
+Each entry has the date, the venue, the recording and slides where they exist, and its sources.
+Three old workshop sites went offline when their GitHub Pages builds disappeared, so their pages are
+kept here as they were.
 
 {/* talks:timeline */}
 
@@ -46,15 +43,15 @@ entry says what the source is.
 |---|---|---|---|---|
 | January 18, 2018 | [BrooklynJS, New York](./2018-brooklynjs.md) | BrooklynJS, Brooklyn, New York | talk | none |
 | April 19 to 20, 2018 | [MiXiT, Lyon](./2018-mixit-lyon.md) | MiXiT, Lyon, France | talk | [watch](https://vimeo.com/269818334) |
-| May 11 to 13, 2018 | [Teardown 2018, Portland](./2018-teardown-portland.md) | Teardown, by Crowd Supply, Portland, Oregon | workshop | site re-hosted |
-| July 2 to 4, 2018 | [SPA Software in Practice 2018, London](./2018-spa-london.md) | SPA Software in Practice, at the British Computer Society, London, UK | workshop | site re-hosted |
+| May 11 to 13, 2018 | [Teardown 2018, Portland](./2018-teardown-portland.md) | Teardown, by Crowd Supply, Portland, Oregon | workshop | site kept |
+| July 2 to 4, 2018 | [SPA Software in Practice 2018, London](./2018-spa-london.md) | SPA Software in Practice, at the British Computer Society, London, UK | workshop | site kept |
 
 ### 2019
 
 | When | What | Where | Kind | Recording |
 |---|---|---|---|---|
 | September 21 to 22, 2019 | [Web Weekend Kathmandu](./2019-web-weekend-kathmandu.md) | Web Weekend Kathmandu (wwktm), Kathmandu, Nepal | talk | [watch](https://www.youtube.com/watch?v=aYwuHTVZrqY) |
-| October 24 to 25, 2019 | [LibertyJS 2019, Philadelphia](./2019-libertyjs-philadelphia.md) | LibertyJS, Philadelphia, Pennsylvania | workshop | site re-hosted |
+| October 24 to 25, 2019 | [LibertyJS 2019, Philadelphia](./2019-libertyjs-philadelphia.md) | LibertyJS, Philadelphia, Pennsylvania | workshop | site kept |
 | December 12, 2019 | [Dip Your Toes Into Hardware With WebMIDI](./2019-css-tricks-article.md) | CSS-Tricks | article | none |
 
 ### 2020
@@ -82,12 +79,10 @@ entry says what the source is.
 Between 2018 and 2019 I was also giving a talk called JavaScript for Artists, with Web MIDI as one
 colour on the palette next to Web Audio, the camera, and a bit of machine learning. My talks page
 lists Front-Trends, FullStack 2018, GDG DevFest San Francisco, FrontMania, c't webdev, Microsoft
-Build, HalfStack Vienna, Heapcon, ChangeCon, RuhrJS and WebCamp Zagreb in those two years. The
-recordings I can find from that stretch are JavaScript for Artists at Heapcon
+Build, HalfStack Vienna, Heapcon, ChangeCon, RuhrJS and WebCamp Zagreb in those two years.
+Recordings from that stretch: JavaScript for Artists at Heapcon
 ([watch](https://www.youtube.com/watch?v=omySQ1n_l8k)) and ChangeCon
-([watch](https://www.youtube.com/watch?v=Dgve_JmbY9U)), and Self-Portraits in JavaScript at RuhrJS
-and WebCamp Zagreb. Which talk went to which of the others is not written down anywhere I can cite,
-so they stay off the table above.
+([watch](https://www.youtube.com/watch?v=Dgve_JmbY9U)).
 
 ## Where the rest lives
 
@@ -95,7 +90,6 @@ so they stay off the table above.
   [george.mand.is/javascript-webmidi-tiny-computers](https://george.mand.is/javascript-webmidi-tiny-computers).
   Its lists of controllers, boards and libraries live on here as [Getting a device](/devices/getting-one/),
   [Make your own](/make-your-own/) and [Something else](/pick-your-tool/something-else/).
-  It has the JSFoo recording, the controller shopping list, and the library links from the era.
-- The sources for every entry, and the assumptions made where sources disagree, are in
+- The sources for every entry are in
   [talks/INDEX.md](https://github.com/georgemandis/morethanmusic.dev/blob/main/talks/INDEX.md)
   in the repo.

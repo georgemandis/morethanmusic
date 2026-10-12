@@ -8,7 +8,7 @@ slug: /talks/2018-spa-london/site/
 {/* copied from talks/2018-spa-london/site/README.md by `node website/refresh.mjs talks`; edit the source, not this */}
 
 :::note
-As given in 2018, kept as it was. This was the home page. [The entry](../2018-spa-london.md) says where it was given and why.
+The 2018 workshop site's home page, kept as it was. [The entry](../2018-spa-london.md) has the context.
 :::
 
 ![Make More Than Music with MIDI, Tiny Computers & JavaScript](/img/talks/2018-spa-london/hero-image.jpg)

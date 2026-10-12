@@ -411,10 +411,10 @@ function renderTalk(t) {
     ...links.map(([k, v]) => [LINK_LABELS[k], mdLink(v)]),
   ];
   const missing = [];
-  if (['talk', 'workshop'].includes(d.kind) && !video) missing.push('No recording of this one turned up in the sources.');
-  if (d.kind === 'talk' && !(d.links && d.links.slides)) missing.push('No slides for this one are published.');
-  if (d.kind === 'workshop' && !(d.links && d.links.site) && !t.site) missing.push('Its site is gone and nothing is re-hosted here.');
-  if (t.site) missing.push(`Its original site is offline. The pages are re-hosted below, [as given](./${t.slug}/index.md).`);
+  if (['talk', 'workshop'].includes(d.kind) && !video) missing.push('No recording is known.');
+  if (d.kind === 'talk' && !(d.links && d.links.slides)) missing.push('No published slides.');
+  if (d.kind === 'workshop' && !(d.links && d.links.site) && !t.site) missing.push('Its site is offline.');
+  if (t.site) missing.push(`Its site is offline; its pages are [kept here](./${t.slug}/index.md) as they were.`);
   if (t.transcript) missing.push('A transcript is at the bottom of the page.');
   const embed = video ? videoEmbed(video, `${d.title}, ${d.venue}`) : '';
   // assets/youtube-<id>.jpg are thumbnails of that video; the embedded one is not repeated. Anything else is a photo.
@@ -464,7 +464,7 @@ function renderSitePage(t, name, label, position, year) {
   // the CodePen iframes: HTML attributes as JSX
   text = text.replace(/ style='([^']*)'/g, (s, css) => ` style={{${css.split(';').filter((r) => r.trim()).map((r) => { const [k, v] = r.split(':'); return `${k.trim().replace(/-(\w)/g, (x, c) => c.toUpperCase())}: '${v.trim()}'`; }).join(', ')}}}`)
     .replace(/ frameborder=/g, ' frameBorder=').replace(/ allowfullscreen=/g, ' allowFullScreen=').replace(/ allowtransparency=/g, ' allowTransparency=');
-  const banner = `:::note\nAs given in ${year}, kept as it was. Only the links and images were pointed at this site. [The entry](../${t.slug}.md) says where it was given and why.\n:::`;
+  const banner = `:::note\nThe ${year} workshop site, kept as it was. Links and images point here now. [The entry](../${t.slug}.md) has the context.\n:::`;
   return [
     '---', `sidebar_label: ${JSON.stringify(label)}`, `sidebar_position: ${position}`, `slug: /talks/${t.slug}/${name.replace(/^\d+-/, '')}/`, '---', '',
     `{/* copied from ${path.relative(ROOT, src).split(path.sep).join('/')} by \`node website/refresh.mjs talks\`; edit the source, not this */}`, '',
@@ -479,7 +479,7 @@ function renderSiteIndex(t, year) {
   return [
     '---', `title: ${JSON.stringify(h.title || h.heroText || t.data.title)}`, `sidebar_label: "Site, as given"`, 'sidebar_position: 0', `slug: /talks/${t.slug}/site/`, '---', '',
     `{/* copied from ${path.relative(ROOT, path.join(t.site.dir, 'README.md')).split(path.sep).join('/')} by \`node website/refresh.mjs talks\`; edit the source, not this */}`, '',
-    `:::note\nAs given in ${year}, kept as it was. This was the home page. [The entry](../${t.slug}.md) says where it was given and why.\n:::`, '',
+    `:::note\nThe ${year} workshop site's home page, kept as it was. [The entry](../${t.slug}.md) has the context.\n:::`, '',
     hero + (h.description ? `${h.description}\n\n` : '') + pages, '',
   ].join('\n');
 }
@@ -506,7 +506,7 @@ function renderTimeline(talks) {
     for (const t of list) {
       const d = t.data;
       const video = d.video || (d.links && d.links.video);
-      const rec = video ? `[watch](${video})` : t.site ? 'site re-hosted' : 'none';
+      const rec = video ? `[watch](${video})` : t.site ? 'site kept' : 'none';
       out.push(`| ${longDate(d.date, d.date_end)} | [${d.title}](./${t.slug}.md) | ${[d.venue, d.city].filter(Boolean).join(', ')} | ${d.kind} | ${rec} |`);
     }
     out.push('');

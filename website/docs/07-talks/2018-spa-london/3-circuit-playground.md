@@ -7,7 +7,7 @@ slug: /talks/2018-spa-london/circuit-playground/
 {/* copied from talks/2018-spa-london/site/3-circuit-playground.md by `node website/refresh.mjs talks`; edit the source, not this */}
 
 :::note
-As given in 2018, kept as it was. Only the links and images were pointed at this site. [The entry](../2018-spa-london.md) says where it was given and why.
+The 2018 workshop site, kept as it was. Links and images point here now. [The entry](../2018-spa-london.md) has the context.
 :::
 
 # Our Circuit Playgrounds

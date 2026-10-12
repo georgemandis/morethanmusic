@@ -7,7 +7,7 @@ slug: /talks/2019-libertyjs-philadelphia/circuit-playground/
 {/* copied from talks/2019-libertyjs-philadelphia/site/3-circuit-playground.md by `node website/refresh.mjs talks`; edit the source, not this */}
 
 :::note
-As given in 2019, kept as it was. Only the links and images were pointed at this site. [The entry](../2019-libertyjs-philadelphia.md) says where it was given and why.
+The 2019 workshop site, kept as it was. Links and images point here now. [The entry](../2019-libertyjs-philadelphia.md) has the context.
 :::
 
 # Our Circuit Playgrounds

@@ -6,7 +6,7 @@ date_end: 2017-10-20
 venue: Voxxed Days Belgrade
 city: Belgrade, Serbia
 kind: talk
-summary: Belgrade in October. Forty minutes, and the first of two visits to Serbia with a MIDI controller in my bag.
+summary: Belgrade in October. Forty minutes.
 video: https://www.youtube.com/watch?v=kJUFUBGPWG4
 links:
   video: https://www.youtube.com/watch?v=kJUFUBGPWG4
@@ -15,15 +15,9 @@ links:
 
 ## What happened
 
-The sixth time out, by the count in the notes folder, which lists "HolyJS, OdessaJS, Fullstack
-London, NEJS Conf, Donut.js, JSFoo and Voxxed Days Belgrade" and says "I've delivered this talk 6
-times in various incarnations and venues." That is seven venues, and the count was written before
-the last one. The deck's commit for this trip is dated 2017-10-31 and titled "belgrade", eleven days
-after the conference, so the changes were committed on the way to the next one.
-
-The Voxxed Days channel posted the recording on 2017-11-08 as "VDB17 • George Mandis - More Than
-Music: Tiny Computers, JavaScript and MIDI". The hostname for the day's ngrok tunnel is still the
-uncommented line in the deck's notes: `ngrok http -hostname=voxxed.mand.is 9000`.
+The seventh venue for the talk, by the count in the notes. The Voxxed Days channel posted the
+recording on 2017-11-08 as "VDB17 • George Mandis - More Than Music: Tiny Computers, JavaScript and
+MIDI".
 
 ## Sources
 

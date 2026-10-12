@@ -6,7 +6,7 @@ date_end: 2017-09-16
 venue: JSFoo 2017
 city: Bangalore, India
 kind: talk
-summary: The version I pointed people at for years. It was the one embedded on midi.mand.is, and it still is on the page that replaced it.
+summary: The recording that the midi.mand.is landing page embedded for years.
 video: https://www.youtube.com/watch?v=R0-XLrr8icY
 links:
   video: https://www.youtube.com/watch?v=R0-XLrr8icY
@@ -15,20 +15,12 @@ links:
 
 ## What happened
 
-Hasgeek filmed this one and had it up the next day, 2017-09-16, under the title "Tiny Computers,
-JavaScript and MIDI". When I made the midi.mand.is landing page I embedded it with the words "You can
-watch this version of my talk from JSFoo 2017 to get a sense of the topic," and that line is still
-on the page it forwards to.
+Hasgeek filmed this one and had it up the next day under the title "Tiny Computers, JavaScript and
+MIDI". It is the recording the midi.mand.is landing page embedded as "The Talk".
 
-The deck has a commit from the day before, 2017-09-15, "JSFoo updates". There is also a separate
-outline in the notes folder, `jsfoo-conversation-notes-outline.md`, that shows how the talk was
-restructured for this run: open with the Websocket Symphony, then Symphony II with a MIDI file
-spread across the crowd's phones, then introduce myself, then MIDI, JavaScript, tiny computers, then
-four or five demos. It has the sentence that became the whole second half of the talk: "The secret
-to this stack: MIDI is just numbers."
-
-The abstract in the video description is the one from the notes folder: "We're living the halcyon
-days of tiny computers and JavaScript, but MIDI is a technology that's been around for much longer."
+The talk was reordered for this run: open with the Websocket Symphony, then a MIDI file spread
+across the crowd's phones, then MIDI, JavaScript and tiny computers, then the demos. From the
+outline: "The secret to this stack: MIDI is just numbers."
 
 ## Sources
 

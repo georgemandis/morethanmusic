@@ -8,7 +8,7 @@ slug: /talks/2018-teardown-portland/site/
 {/* copied from talks/2018-teardown-portland/site/README.md by `node website/refresh.mjs talks`; edit the source, not this */}
 
 :::note
-As given in 2018, kept as it was. This was the home page. [The entry](../2018-teardown-portland.md) says where it was given and why.
+The 2018 workshop site's home page, kept as it was. [The entry](../2018-teardown-portland.md) has the context.
 :::
 
 ![Make More Than Music with MIDI, Tiny Computers & JavaScript](/img/talks/2018-teardown-portland/hero-image.jpg)

@@ -6,30 +6,18 @@ date_end: 2017-07-14
 venue: FullStack 2017
 city: London, UK
 kind: talk
-summary: The talk at Skills Matter's FullStack, on the Friday, in a room full of IoT people. The one that gave me the cellular automata demo.
+summary: Skills Matter's FullStack, on the Friday, in a room full of IoT people.
 links:
   event: https://skillsmatter.com/conferences/8264-fullstack-2017-the-conference-on-javascript-node-and-internet-of-things
 ---
 
 ## What happened
 
-The post from 2017-07-09 says I was speaking "this coming Friday", which makes it July 14. The
-event was sold out. Douglas Crockford gave the opening keynote. I was looking forward to Tero
-Parviainen's talk on generative music with Web Audio, "even though the point of my talk is there are
-'non-musical' applications for MIDI."
+The event was sold out and Douglas Crockford gave the opening keynote. Tero Parviainen spoke on
+generative music with Web Audio. One slide of his used a one-dimensional cellular automaton to pick
+notes, and that became the [Launchpad demo](./2017-cellular-automata.md) later in the year.
 
-That turned out to matter. One slide in Tero's talk used cellular automata to generate music, and I
-built it onto a Launchpad for my own talk later that year. See the
-[cellular automata entry](./2017-cellular-automata.md).
-
-The same post has the line I would use as the pitch for years: the feedback so far "has been that
-it's 'fun' and nice to be reminded about something that's not strictly related to work." And:
-"That's the beauty of this talk. I can probably continue to give it for some time as long as I keep
-the experiments fresh and interesting."
-
-No recording of this one turned up. Skills Matter hosted their own videos and the search found none
-on YouTube. The deck's `NOTES.md` has the hostname I tunneled through that day,
-`fullstack2017.mand.is`.
+No recording of this one is known.
 
 ## Sources
 

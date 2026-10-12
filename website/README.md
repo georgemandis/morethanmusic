@@ -78,7 +78,7 @@ import LiveSketch from '@site/src/components/LiveSketch';
 
 Those paths exist in production because `deploy-preview.sh` lays the repo folders beside the build.
 For `npm start`, `link-repo.mjs` (`prestart`) fills `.repo-links/` with a symlink to every top-level
-repo folder except `website`, `site`, `docs`, `pcd2026` and `node_modules`, and the config lists
+repo folder except `website`, `docs`, `pcd2026` and `node_modules`, and the config lists
 `.repo-links` as a second static directory. Before `npm run build` it runs with `--empty` and leaves
 the folder empty, because Docusaurus would otherwise copy every linked folder into `build/` wholesale,
 local build output included; `build-site.sh` lays the folders out instead. `.repo-links` is git-ignored.
@@ -114,11 +114,11 @@ Three Workers, three configs:
 | Preview | `wrangler.preview.jsonc` (`morethanmusic-preview`, workers.dev only) | `deploy-preview.sh` | this site, for a look before deploying |
 | pcd2026.mand.is | `pcd2026/wrangler.jsonc` (`pcd-midi-workshop`) | `pcd2026/deploy.sh` | a 301 to morethanmusic.dev; `/` goes to the PCD talk entry. `node pcd2026/test.mjs` |
 
-`build-site.sh` is the shared first step: it refreshes the includes, builds, merges every top-level
-repo folder except `website`, `node_modules`, `docs` (planning), `pcd2026` and `site` (the retired
-hand-built workshop site) into `build/` with `rsync --ignore-existing` (so `devices/` and `talks/`
-land beside the `/devices/` and `/talks/` pages without replacing them), copies loose root files that
-do not shadow the site's own, and copies `.assetsignore`. The deploy scripts run it and then
+`build-site.sh` is the shared first step: it refreshes the includes, builds, then runs `layout.mjs`,
+which merges every top-level repo folder except `website`, `node_modules`, `docs` (planning) and
+`pcd2026` (the redirect Worker) into `build/` without replacing anything the site built (so `devices/`
+and `talks/` land beside the `/devices/` and `/talks/` pages), skips build output and the loose root
+files that are not for the site, and copies `.assetsignore`. The deploy scripts run it and then
 `wrangler deploy` with their config. The live site is built by Cloudflare Workers Builds from the
 `main` branch of the public repo, with the build command `cd website && npm ci && cd .. && ./build-site.sh`
 and the default deploy command, so a push to `main` is a deploy. CI on GitHub runs the helper test

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Makes .repo-links/ hold a symlink to every top-level folder of the repo except website/, site/ and
+// Makes .repo-links/ hold a symlink to every top-level folder of the repo except website/ and
 // node_modules/. Docusaurus serves it as a second static directory (see staticDirectories in
 // docusaurus.config.js), so /starters/p5/pipsqueak/ and /midi-helpers/p5/midi-helpers.js resolve in
 // `npm start` exactly as they do on the live host. Runs before start. Before build it runs with --empty
@@ -15,7 +15,7 @@ const root = path.resolve(here, '..');
 const links = path.join(here, '.repo-links');
 fs.rmSync(links, {recursive: true, force: true});
 fs.mkdirSync(links);
-const skip = new Set(['devices', 'website', 'site', 'node_modules', 'docs', 'pcd2026']);
+const skip = new Set(['devices', 'website', 'node_modules', 'docs', 'pcd2026']);
 if (process.argv.includes('--empty')) { console.log('.repo-links: empty (build)'); process.exit(0); }
 for (const name of fs.readdirSync(root).sort()) {
   if (name.startsWith('.') || skip.has(name)) continue;

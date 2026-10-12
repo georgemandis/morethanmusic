@@ -60,10 +60,10 @@ LANDS=("/before-you-start/ /" "/start-here/ /" "/agenda/ /talks/pcd-2026-nyc/" "
   "/hello-world/ /examples/hello-world/" "/demos/ /examples/demos/" "/references/ /examples/references/"
   "/your-device/pipsqueak/ /devices/pipsqueak/" "/your-device/ /devices/" "/explorer /explorer/web/" "/examples/launchpad/ /starters/p5/launchpad/"
   "/helpers.js /mtm-midi-helpers/latest/midi-helpers.js" "/projects-live /examples/demos/")
-# Paths that must not be served: local build output, the planning folder, the retired site, private notes.
+# Paths that must not be served: local build output, the planning folder, private notes, personal files.
 ABSENT=(/midi-helpers/processing-library/build/midihelpers.txt /midi-helpers/processing-library/build/midihelpers/library/midihelpers.jar
   /midi-helpers/python/build/mtm-midi-helpers-python-1.0.0.zip /midi-helpers/dist/1.0.0/SHA256SUMS
-  /docs/superpowers/plans/2026-10-04-more-than-music-resource.md /pcd2026/worker.js /site/index.html /PLAN.md /RELEASE.md /publish.sh /deploy.sh /headshot.html /me.jpg /split-life.html)
+  /docs/superpowers/plans/2026-10-04-more-than-music-resource.md /pcd2026/worker.js /PLAN.md /RELEASE.md /publish.sh /deploy.sh /headshot.html /me.jpg /split-life.html)
 # Doc pages loaded in Chrome along with the embeds, for hydration errors and the iframes' own console.
 PAGES=(/ /the-explorer/ /devices/pipsqueak/ /examples/hello-world/ /talks/ /troubleshooting/)
 

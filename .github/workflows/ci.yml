@@ -103,26 +103,3 @@ jobs:
         working-directory: website
       - run: npm run build
         working-directory: website
-
-  deploy:
-    name: deploy morethanmusic.dev
-    needs: [p5, python, java, site]
-    if: github.ref == 'refs/heads/main' && github.repository == 'georgemandis/morethanmusic'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-      - name: is there a Cloudflare token
-        id: token
-        run: echo "present=${{ secrets.CLOUDFLARE_API_TOKEN != '' }}" >> "$GITHUB_OUTPUT"
-      - name: build and deploy (skipped until CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID are set)
-        if: steps.token.outputs.present == 'true'
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        run: |
-          (cd website && npm ci)
-          ./build-site.sh
-          npx -y wrangler@4.149.0 deploy -c wrangler.jsonc

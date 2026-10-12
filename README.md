@@ -20,7 +20,7 @@ Start at https://morethanmusic.dev/. Plug a device in, open the Explorer, pick a
 | `projects/` | the ten PipSqueak ideas built out, each in all three |
 | `ports/` | bigger sketches: Launchpad automata and marquee, Midi Fighter sequencer and fireworks, Circuit Playground projects |
 | `firmware/` | turning boards into MIDI devices: Trinkeys, Puck.js, Arduino MIDIUSB, the Circuit Playground multi-tool |
-| `talks/` | every talk and workshop since 2017, with sources, transcripts and the old workshop sites as they were |
+| `talks/` | every talk and workshop since 2017, with sources and the old workshop sites as they were |
 | `slides/` | the Processing Community Day 2026 deck, itself a Processing sketch |
 | `grid-controllers/`, `pipsqueak/`, `launchpad-*/`, `midi-fighter/`, `pipsqueak-grayscott/` | the p5 demos the ports came from |
 

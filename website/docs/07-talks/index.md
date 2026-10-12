@@ -18,7 +18,7 @@ for Processing Community Day in New York with chess on a Launchpad and fireworks
 The idea never changed. The hardware got cheaper and the browsers got better.
 
 This page is the timeline. Each entry has the date, the venue, the recording where one exists, the
-slides where they are published, and a transcript where YouTube made captions. Three old workshop
+slides where they are published. Three old workshop
 sites went offline when their GitHub Pages builds disappeared, so their pages are re-hosted here, as
 they were. No date or venue on these pages comes from memory. Every one has a source, and the
 entry says what the source is.

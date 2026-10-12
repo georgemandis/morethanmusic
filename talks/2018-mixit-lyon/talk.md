@@ -19,7 +19,7 @@ MiXiT's speaker page for 2018 lists the talk under its full name, "Make More Tha
 JavaScript & Tiny Computers", in English. The deck has "ready for mixit" on 2018-04-20, with a
 "thank you slide" and "final additions" the same day, and the media folder has a `lyon.jpg`.
 
-The recording is on Vimeo rather than YouTube, which is why there is no transcript on this page.
+The recording is on Vimeo rather than YouTube.
 Vimeo will not hand its captions to a script without a login. The talks page links it.
 
 ## Sources

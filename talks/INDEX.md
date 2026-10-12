@@ -1,7 +1,7 @@
 # Talks and workshops: the entry list
 
 One folder per entry under `talks/<yyyy>-<slug>/`. Each has a `talk.md` (front matter plus the
-page body), a `transcript.md` where a recording exists, `assets/` for thumbnails, and `site/` where
+page body), `assets/` for thumbnails, and `site/` where
 an old workshop site is re-hosted. `node website/refresh.mjs talks` renders them into
 `website/docs/07-talks/`.
 

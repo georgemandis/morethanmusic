@@ -21,10 +21,10 @@ Still on Processing 3.5.4? The sketches work there too.
 ## Get the sketches
 
 The starters, helpers, Explorer and demos are in one repo:
-[github.com/georgemandis/morethanmusic](https://github.com/georgemandis/morethanmusic).
+[github.com/georgemandis/morethanmusic.dev](https://github.com/georgemandis/morethanmusic.dev).
 
 ```sh
-git clone https://github.com/georgemandis/morethanmusic.git
+git clone https://github.com/georgemandis/morethanmusic.dev.git
 ```
 
 No git? The green Code button on that page has Download ZIP. Unzip it anywhere and open sketches

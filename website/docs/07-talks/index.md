@@ -97,5 +97,5 @@ so they stay off the table above.
   [Make your own](/make-your-own/) and [Something else](/pick-your-tool/something-else/).
   It has the JSFoo recording, the controller shopping list, and the library links from the era.
 - The sources for every entry, and the assumptions made where sources disagree, are in
-  [talks/INDEX.md](https://github.com/georgemandis/morethanmusic/blob/main/talks/INDEX.md)
+  [talks/INDEX.md](https://github.com/georgemandis/morethanmusic.dev/blob/main/talks/INDEX.md)
   in the repo.

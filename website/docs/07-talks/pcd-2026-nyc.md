@@ -39,7 +39,7 @@ The goal is simple: pick up a device and have it move something on your screen w
 - For the p5 side, a browser with Web MIDI: Chrome, Edge, Opera, Brave, or Firefox 108 and up. Safari
   doesn't have it.
 - This site open on your phone, next to your laptop.
-- The sketches, from [the workshop repo on GitHub](https://github.com/georgemandis/morethanmusic) (then named
+- The sketches, from [the workshop repo on GitHub](https://github.com/georgemandis/morethanmusic.dev) (then named
   processing-community-day-2026-nyc-midi-workshop; the old address redirects). Clone it or download the ZIP.
   [Get the sketches](/pick-your-tool/processing-java/#get-the-sketches) has the steps.
 
@@ -86,7 +86,7 @@ your device sends.
 ## Take it home
 
 - The helpers, starters, projects, Explorer, ports and demos are in the workshop repo:
-  [github.com/georgemandis/processing-community-day-2026-nyc-midi-workshop](https://github.com/georgemandis/morethanmusic). Clone it or download the ZIP.
+  [github.com/georgemandis/processing-community-day-2026-nyc-midi-workshop](https://github.com/georgemandis/morethanmusic.dev). Clone it or download the ZIP.
 - The helpers are plain sketch tabs built on `javax.sound.midi`. Copy `MidiCore.pde` and the device's
   tab into any sketch and they work the same way. The p5 versions are one script tag.
 - The PipSqueaks are from [useMidi](https://usemidi.com). Thanks to Masson for the hardware. Get one and

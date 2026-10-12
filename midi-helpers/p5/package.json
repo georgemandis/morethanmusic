@@ -48,10 +48,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/georgemandis/morethanmusic.git",
+    "url": "git+https://github.com/georgemandis/morethanmusic.dev.git",
     "directory": "midi-helpers/p5"
   },
   "bugs": {
-    "url": "https://github.com/georgemandis/morethanmusic/issues"
+    "url": "https://github.com/georgemandis/morethanmusic.dev/issues"
   }
 }

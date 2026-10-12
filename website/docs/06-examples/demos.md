@@ -82,7 +82,7 @@ when you leave.
 ## Ports you can take apart
 
 Three of the demos were rewritten with the workshop helpers so you can open them in the IDE and change
-them. The Processing versions are in [ports/](https://github.com/georgemandis/morethanmusic/tree/main/ports). Two of them also run right here
+them. The Processing versions are in [ports/](https://github.com/georgemandis/morethanmusic.dev/tree/main/ports). Two of them also run right here
 with the p5 helpers.
 
 ### Launchpad Automata, p5.js

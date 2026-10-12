@@ -58,7 +58,7 @@ const config = {
           {to: '/devices/', label: 'Devices', position: 'left'},
           {to: '/helpers/', label: 'Helpers', position: 'left'},
           {to: '/talks/', label: 'Talks', position: 'left'},
-          {href: 'https://github.com/georgemandis/morethanmusic', label: 'GitHub', position: 'right'},
+          {href: 'https://github.com/georgemandis/morethanmusic.dev', label: 'GitHub', position: 'right'},
         ],
       },
       footer: {

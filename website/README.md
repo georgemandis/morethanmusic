@@ -133,7 +133,7 @@ Plausible is in `headTags` and only loads when `location.hostname` is `morethanm
 - The Examples section owns `/examples/`. The old `/examples/*` shortcut into `starters/p5/` is kept
   for the five device names only; `/projects-live` goes to the demos page, since `projects/p5/` has no
   index page and used to 404.
-- The GitHub links point at `georgemandis/morethanmusic`, the public repo (the renamed workshop repo;
+- The GitHub links point at `georgemandis/morethanmusic.dev`, the public repo (the renamed workshop repo;
   the old name redirects). `publish.sh` mirrors this working repo into it.
 - The Helpers page pulls `midi-helpers/README.md#Install` and `#In the IDE`, so the registry READMEs
   can link to `/helpers/` and the page stays in step with the helpers' own README.

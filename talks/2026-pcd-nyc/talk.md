@@ -9,7 +9,7 @@ summary: Nine years on, the workshop again, this time for Processing people. Che
 video: https://www.youtube.com/watch?v=SDlynVony4o
 links:
   site: /talks/pcd-2026-nyc/
-  repo: https://github.com/georgemandis/morethanmusic
+  repo: https://github.com/georgemandis/morethanmusic.dev
   event: https://www.pcd2026.nyc/
   video: https://www.youtube.com/watch?v=SDlynVony4o
 ---

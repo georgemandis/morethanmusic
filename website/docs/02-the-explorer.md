@@ -24,7 +24,7 @@ It is a full-page tool, so use that link for real work. The version below is a p
 The same screen as a Processing 4 sketch, for Safari, phones, or any machine without Web MIDI. Get
 the `explorer/MidiExplorer` folder, open `MidiExplorer.pde`, press Run:
 
-- From the repo: [explorer/MidiExplorer on GitHub](https://github.com/georgemandis/morethanmusic/tree/main/explorer/MidiExplorer),
+- From the repo: [explorer/MidiExplorer on GitHub](https://github.com/georgemandis/morethanmusic.dev/tree/main/explorer/MidiExplorer),
   or clone the whole thing ([how](/pick-your-tool/processing-java/#get-the-sketches)).
 - From this site, file by file: [MidiExplorer.pde](pathname:///explorer/MidiExplorer/MidiExplorer.pde)
   and the other tabs in that folder, plus `code/coremidi4j-1.6.jar` for hot-plugging.

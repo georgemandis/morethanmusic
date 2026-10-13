@@ -64,7 +64,7 @@ const config = {
       footer: {
         style: 'dark',
         links: [],
-        copyright: 'More than Music with MIDI · George Mandis',
+        copyright: 'More than Music with MIDI · <a href="https://george.mand.is">George Mandis</a>',
       },
       prism: {
         theme: prismThemes.github,
